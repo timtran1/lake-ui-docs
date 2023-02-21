@@ -1,0 +1,8 @@
+.lake-top-bar {
+    position: sticky;
+    top: 0;
+    background: white;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
