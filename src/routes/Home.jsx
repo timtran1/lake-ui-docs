@@ -1,3 +1,7 @@
 export default function () {
-	return <h1>Hello world</h1>
+	return (
+		<div className={`w-full`}>
+			<h1>Hello world</h1>
+		</div>
+	)
 }
