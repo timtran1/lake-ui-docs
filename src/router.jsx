@@ -1,5 +1,5 @@
 import {createBrowserRouter} from "react-router-dom";
-import Homebase from "./routes/Home.jsx";
+import Home from "./routes/Home.jsx";
 
 export default createBrowserRouter([
   {
