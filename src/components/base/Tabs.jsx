@@ -1,23 +1,57 @@
-export default function Tabs(props) {
-    const {tabs, tabless, children, className, ...other} = props
+import './css/Tabs.css'
+import usePrevious from "../../utilities/usePrevious.js";
+import {useEffect, useState} from "react";
+
+function Tab(props) {
+    const {index, tab} = props
     const [currentTabIndex, setCurrentTabIndex] = props.useCurrentTabIndex
+    const [translateX, setTranslateX] = useState(currentTabIndex === index ? '' : 'translate-right')
+    const prevTabIndex = usePrevious(currentTabIndex)
+
+    useEffect(() => {
+        if (currentTabIndex === index) { // this is now active panel
+            setTranslateX('')
+        }
+        if (prevTabIndex === index) { // leaving away from this panel
+            if (index < currentTabIndex) { // move to forward panels
+                console.log('forward', {index, currentTabIndex, prevTabIndex})
+                setTranslateX('translate-right')
+            } else if (index > currentTabIndex) { // move to backward panels
+                console.log('backward', {index, currentTabIndex, prevTabIndex})
+                setTranslateX('translate-left')
+            }
+        }
+    }, [currentTabIndex])
 
     return (
-        <div className="flex flex-col overflow-hidden">
+        <div className={`lake-tab ${currentTabIndex === index ? 'active': ''}`} onClick={() => setCurrentTabIndex(index)}>
+            <div className={`lake-tab-bg ${translateX}`}></div>
+            <div className={`lake-tab-content`}>{tab}</div>
+        </div>
+    )
+}
+
+
+export default function Tabs(props) {
+    const {tabs, tabless, children, className, useCurrentTabIndex, ...other} = props
+    // const [currentTabIndex, setCurrentTabIndex] = props.useCurrentTabIndex
+
+    return (
+        <div className="lake-tabs-wrap">
             {!tabless &&
-                <div className="flex items-stretch py-1.5 pl-1.5 bg-gray-100 rounded-md ">
+                <div className="lake-tabs-bg">
                     {tabs.map((tab, index) =>
-                        <div
+                        <Tab
                             key={index}
-                            className={`px-2 py-1.5 rounded-md min-w-[100px] mr-1 cursor-pointer ${currentTabIndex === index ? 'bg-white drop-shadow-md' : 'bg-gray-100 hover:bg-gray-200'}`}
-                            onClick={() => setCurrentTabIndex(index)}
-                        >
-                            {tab}
-                        </div>)}
+                            index={index}
+                            tab={tab}
+                            useCurrentTabIndex={useCurrentTabIndex}
+                        />
+                    )}
                 </div>
             }
 
-            <div className="relative min-h-[50px]">
+            <div className="lake-tabs-children">
                 {children}
             </div>
         </div>

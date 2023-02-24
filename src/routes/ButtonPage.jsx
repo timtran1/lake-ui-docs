@@ -26,13 +26,13 @@ export default function () {
                 </TabPanel>
 
                 <TabPanel index={1} currentTabIndex={tab}>
-                    ggg
+                    ggg2
                     cvxv
                 </TabPanel>
 
 
                 <TabPanel index={2} currentTabIndex={tab}>
-                    ertetete
+                    ertetete3
                     aaaaaaaa
                 </TabPanel>
             </Tabs>
