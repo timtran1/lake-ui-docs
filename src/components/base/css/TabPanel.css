@@ -1,9 +1,8 @@
 .lake-tabpanel {
-    /*display: none;*/
     padding: 0.5rem;
-    position: absolute;
+    /*position: absolute;*/
     width: 100%;
-    transition: transform 0.2s ease;
+    transition: transform 0.3s ease;
 }
 
 .lake-tabpanel.show {
@@ -11,10 +10,12 @@
 }
 
 .lake-tabpanel.translate-right {
+    position: absolute;
     transform: translateX(100%);
 }
 
 
 .lake-tabpanel.translate-left {
+    position: absolute;
     transform: translateX(-100%);
 }

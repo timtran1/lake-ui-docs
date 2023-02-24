@@ -37,7 +37,7 @@ export default function Tabs(props) {
     // const [currentTabIndex, setCurrentTabIndex] = props.useCurrentTabIndex
 
     return (
-        <div className="lake-tabs-wrap">
+        <div className={`lake-tabs-wrap ${className}`}>
             {!tabless &&
                 <div className="lake-tabs-bg">
                     {tabs.map((tab, index) =>
