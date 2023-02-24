@@ -1,0 +1,20 @@
+.lake-tabpanel {
+    /*display: none;*/
+    padding: 0.5rem;
+    position: absolute;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.lake-tabpanel.show {
+    display: flex;
+}
+
+.lake-tabpanel.translate-right {
+    transform: translateX(100%);
+}
+
+
+.lake-tabpanel.translate-left {
+    transform: translateX(-100%);
+}

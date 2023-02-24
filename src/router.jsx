@@ -1,9 +1,15 @@
 import {createBrowserRouter} from "react-router-dom";
 import Home from "./routes/Home.jsx";
+import ButtonPage from "./routes/ButtonPage.jsx";
 
 export default createBrowserRouter([
-  {
-    path: "/",
-    element: <Home/>,
-  },
+    {
+        path: "/",
+        element: <Home/>,
+    },
+
+    {
+        path: "/button",
+        element: <ButtonPage/>,
+    },
 ])
