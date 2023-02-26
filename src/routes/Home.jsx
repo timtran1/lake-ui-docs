@@ -10,18 +10,7 @@ export default function () {
     const [sidebarOpen, setSidebarOpen] = useState(false)
 
     return (
-        <div>
-            <TopBar className={`w-screen`}>
-                <Button hoverEffect={false} className={`p-2 bg-transparent text-black`}>
-                    <FontAwesomeIcon icon={faBars} onClick={() => setSidebarOpen(true)}/>
-                </Button>
-                <h1 className={`font-bold text-3xl ml-1`}>Lake UI</h1>
-            </TopBar>
-
-            <Sidebar useOpen={[sidebarOpen, setSidebarOpen]}>
-                d
-            </Sidebar>
-
+        // <div>
             <main className={`w-screen h-screen bg-gradient-to-b to-amber-300 from-orange-500`}>
                 <div className={`m-auto max-w-2xl text-center pt-20`}>
                     <h1 className={`text-5xl font-bold text-white mb-3`}>Lake UI</h1>
@@ -39,6 +28,6 @@ export default function () {
 
                 </div>
             </main>
-        </div>
+        // </div>
     )
 }

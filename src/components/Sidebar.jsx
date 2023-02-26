@@ -1,11 +1,15 @@
 import {Link} from "react-router-dom";
+import Sidebar from "./base/Sidebar.jsx";
 
-export default function (){
+export default function (props) {
     return (
-        <div className={`min-w-[200px] border-r border-black`}>
-            <h2>Components</h2>
+        <Sidebar useOpen={props.useOpen} className={`p-3`}>
+            <h2 className={`text-xl font-bold mb-2`}>Components</h2>
 
-            <Link to={`buttons`}>Buttons</Link>
-        </div>
+            <div className={`flex flex-col`}>
+                <Link to={`/button`}>Button</Link>
+                <Link to={`/input`}>Input</Link>
+            </div>
+        </Sidebar>
     )
 }
