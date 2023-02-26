@@ -7,7 +7,7 @@ export default function (props) {
     const [tab, setTab] = useState(0)
 
     return (
-        <Tabs useCurrentTabIndex={[tab, setTab]} tabs={['Example', 'Classes/Tailwind', 'Inline CSS']}>
+        <Tabs useCurrentTabIndex={[tab, setTab]} tabs={['Example', 'Code']}>
             <TabPanel index={0} currentTabIndex={tab}>
                 <div className="rounded-md flex justify-center items-center flex-wrap bg-gradient-to-r from-green-400 to-cyan-500 min-h-[200px]">
                     {props.children}
@@ -15,11 +15,7 @@ export default function (props) {
             </TabPanel>
 
             <TabPanel index={1} currentTabIndex={tab}>
-                <Code code={props.classCode}/>
-            </TabPanel>
-
-            <TabPanel index={2} currentTabIndex={tab}>
-                <Code code={props.inlineCode}/>
+                <Code code={props.code}/>
             </TabPanel>
         </Tabs>
     )

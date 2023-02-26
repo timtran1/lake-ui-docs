@@ -1,4 +1,5 @@
 import ExampleCodeSection from "../components/ExampleCodeSection.jsx";
+import SimpleCodeSection from "../components/SimpleCodeSection.jsx";
 import Input from "../components/base/Input.jsx";
 import {useState} from "react";
 import Sidebar from "../components/Sidebar.jsx";
@@ -22,51 +23,59 @@ export default function () {
                     To use the Input component, import it and add it to your JSX code.
                 </p>
 
-                <ExampleCodeSection classCode={`import Input from './components/Input';
+                <SimpleCodeSection code={`import Input from "./components/base/Input.jsx";
+import {useState} from "react";
 
 function MyComponent() {
-  const handleClick = () => {
-    console.log('Button clicked!');
-  };
+    const [name, setName] = useState('')
 
-  return (
-    <div>
-      <Button onClick={handleClick} className="bg-black">
-        Click Me
-      </Button>
-    </div>
-  );
-}
-`}
-                                    inlineCode={`import Button from './components/Button';
 
-function MyComponent() {
-  const handleClick = () => {
-    console.log('Button clicked!');
-  };
-
-  return (
-    <div>
-      <Button onClick={handleClick} style={{background: 'black'}}>
-        Click Me
-      </Button>
-    </div>
-  );
-}
-`}>
-
-                  <div className="flex flex-col">
-                        <h2 className="text-xl font-bold text-orange-500"><p>Hi {name ? name : ''}!</p></h2>
+    return (
+        <div className="flex flex-col">
+            <h2 className="text-xl font-bold text-yellow-300"><p>Hi {name}!</p></h2>
+            
+            {/*input group*/}
+            <div className="flex flex-col">
+                <label htmlFor="name" className="text-white mb-0.5">Please input your name</label>
+                <Input id="name" type="text" value={name} onChange={e => setName(e.target.value)}/>
+            </div>
+        </div>
+    );
+}`}
+                >
+                    <div className="flex flex-col">
+                        <h2 className="text-xl font-bold text-yellow-300"><p>Hi {name}!</p></h2>
                         <div className="flex flex-col">
-                            <label htmlFor="name">Type your name</label>
-                            <Input id="name" type="text" placeholder="Name..." value={name} onChange={e => setName(e.target.value)}/>
+                            <label htmlFor="name" className={`text-white mb-0.5`}>Please input your name</label>
+                            <Input id="name" type="text" value={name} onChange={e => setName(e.target.value)}/>
+                        </div>
+                    </div>
+                </SimpleCodeSection>
+
+
+                <h3 className="text-lg font-semibold">Styling</h3>
+                <p className="mb-4">
+                    The Input component can be easily customized with CSS.
+                </p>
+
+                <ExampleCodeSection>
+                    <div className={`block`}>
+                        <div className="mb-2">
+                            <Input className="border border-gray-400 mr-2" placeholder="Input with border"/>
+                            <Input className="rounded-none" placeholder="Square input"/>
+                        </div>
+                        <div className="mb-2">
+                            <Input className="w-[100px] mr-2" placeholder="Short input"/>
+                            <Input className="w-[300px]" placeholder="Long input"/>
+                        </div>
+                        <div className="mb-2">
+                            <Input className="w-full" placeholder="Full width input"/>
                         </div>
                     </div>
                 </ExampleCodeSection>
 
-
                 {/*styling*/}
-                border color, border radius, shadow (no border), bg color, sizes
+                border color, border radius, bg color, sizes
 
                 {/*data binding*/}
 

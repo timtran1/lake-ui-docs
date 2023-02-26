@@ -11,11 +11,11 @@ export default function () {
 
     return (
         // <div>
-            <main className={`w-screen h-screen bg-gradient-to-b to-amber-300 from-orange-500`}>
+            <main className={`w-screen h-screen bg-gradient-to-b from-green-400 to-cyan-500`}>
                 <div className={`m-auto max-w-2xl text-center pt-20`}>
                     <h1 className={`text-5xl font-bold text-white mb-3`}>Lake UI</h1>
                     <h2 className={` text-2xl text-white`}>
-                        UI components fully customizable <br/> with inline CSS
+                        React UI components <br/> fully customizable with inline CSS
                         and classes/Tailwind</h2>
                     <div className={`flex justify-center py-4`}>
                         <Button className={`mr-1 py-2.5 px-5 bg-black font-bold`}>Get started</Button>
