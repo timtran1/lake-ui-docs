@@ -1,6 +1,7 @@
 import {createBrowserRouter} from "react-router-dom";
 import Home from "./routes/Home.jsx";
 import ButtonPage from "./routes/ButtonPage.jsx";
+import InputPage from "./routes/InputPage.jsx";
 
 export default createBrowserRouter([
     {
@@ -12,4 +13,8 @@ export default createBrowserRouter([
         path: "/button",
         element: <ButtonPage/>,
     },
+    {
+        path: "/input",
+        element: <InputPage/>,
+    }
 ])

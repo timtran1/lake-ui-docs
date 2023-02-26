@@ -16,12 +16,21 @@ export default function () {
                 To use the Button component, simply import it and add it to your JSX code.
             </p>
 
-            <ExampleCodeSection classCode={`<Button className="bg-black">Black</Button>
-<Button className="bg-white text-black">White</Button>
-<Button className="bg-green-500">Green</Button>
-<Button className="bg-orange-500">Orange</Button>
-<Button className="bg-red-500">Red</Button>
-<Button className="bg-blue-500">Blue (Default)</Button>
+            <ExampleCodeSection classCode={`import Button from './components/Button';
+
+function MyComponent() {
+  const handleClick = () => {
+    console.log('Button clicked!');
+  };
+
+  return (
+    <div>
+      <Button onClick={handleClick} className="bg-black">
+        Click Me
+      </Button>
+    </div>
+  );
+}
 `}
                                 inlineCode={`import Button from './components/Button';
 
