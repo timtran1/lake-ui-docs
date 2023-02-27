@@ -36,7 +36,6 @@ function MyComponent() {
         <div className="flex flex-col">
             <h2 className="text-4xl text-yellow-100 font-bold"><p>Hi {name}!</p></h2>
             
-            {/*input group*/}
             <div className="flex flex-col">
                 <label htmlFor="name" className="text-white mb-0.5">Please enter your name</label>
                 <Input id="name" type="text" value={name} onChange={e => setName(e.target.value)}/>
@@ -48,7 +47,7 @@ function MyComponent() {
                     <div className="flex flex-col">
                         <h2 className="text-4xl text-yellow-100 font-bold"><p>Hi {name}!</p></h2>
                         <div className="flex flex-col">
-                            <label htmlFor="name" className={`text-white mb-0.5`}>Please input your name</label>
+                            <label htmlFor="name" className={`text-white mb-0.5`}>Please enter your name</label>
                             <Input id="name" type="text" value={name} onChange={e => setName(e.target.value)}/>
                         </div>
                     </div>
@@ -308,7 +307,117 @@ function MyComponent() {
                     The Input component can be easily customized with CSS.
                 </p>
 
-                <ExampleCodeSection>
+                <ExampleCodeSection
+                    inlineCode={`<div style={{
+    maxWidth: '32rem',
+    paddingTop: '1.5rem',
+    paddingBottom: '1.5rem'
+}}>
+    <div style={{display: 'flex'}}>
+        <Input style={{marginBottom: '0.5rem'}} placeholder="Normal input"/>
+        <Input style={{
+            marginBottom: '0.5rem',
+            marginLeft: '0.5rem',
+            border: '1px solid #9ca3af'
+        }} placeholder="Input with border"/>
+    </div>
+    <div>
+        <Input style={{
+            marginBottom: '0.5rem',
+            width: '100px',
+        }} placeholder="Short input"/>
+        <Input style={{
+            marginBottom: '0.5rem',
+            marginLeft: '0.5rem',
+            width: '250px',
+        }} placeholder="Long input"/>
+    </div>
+
+    <div style={{marginBottom: '0.5rem'}}>
+        <Input style={{width: '100%'}} placeholder="Full width input"/>
+    </div>
+
+    <div style={{display: 'flex'}}>
+        <Input style={{
+            marginBottom: '0.5rem',
+            width: '50%',
+            borderRadius: '9999px'
+        }} placeholder="Rounded input"/>
+        <Input style={{
+            marginBottom: '0.5rem',
+            marginLeft: '0.5rem',
+            width: '50%',
+            borderRadius: 0
+        }} placeholder="Square input"/>
+    </div>
+
+    <div style={{display: 'flex'}}>
+        <Input style={{
+            marginBottom: '0.5rem',
+            width: '33.3%',
+            background: 'black',
+            color: 'white'
+        }} placeholder="Black background"/>
+        <Input style={{
+            marginBottom: '0.5rem',
+            marginLeft: '0.5rem',
+            width: '33.3%',
+            background: '#fde047'
+        }} placeholder="Yellow background"/>
+        <Input style={{
+            marginBottom: '0.5rem',
+            marginLeft: '0.5rem',
+            width: '33.3%',
+            background: '#e5e7eb'
+        }} placeholder="Gray background"/>
+    </div>
+
+    <div style={{
+        display: 'flex',
+        flexDirection: 'column'
+    }}>
+        <Input style={{
+            marginBottom: '0.5rem',
+            height: '1.75rem',
+            fontSize: '0.875rem'
+        }} className="h-7 mb-2 text-sm" placeholder="Small"/>
+        <Input style={{marginBottom: '0.5rem'}} placeholder="Normal"/>
+        <Input style={{
+            marginBottom: '0.5rem',
+            fontSize: '1.875rem'
+        }} className="h-18 text-3xl" placeholder="Large"/>
+    </div>
+</div>`}
+                    classCode={`<div className="max-w-lg py-6">
+    <div className="flex space-x-2">
+        <Input className="mb-2" placeholder="Normal input"/>
+        <Input className="border border-gray-400 mb-2" placeholder="Input with border"/>
+    </div>
+    <div>
+        <Input className="w-[100px] mr-2 mb-2" placeholder="Short input"/>
+        <Input className="w-[250px] mb-2" placeholder="Long input"/>
+    </div>
+    <div className="mb-2">
+        <Input className="w-full" placeholder="Full width input"/>
+    </div>
+
+    <div className="flex space-x-2">
+        <Input className="w-1/2 rounded-full mb-2" placeholder="Rounded input"/>
+        <Input className="w-1/2 rounded-none mb-2" placeholder="Square input"/>
+    </div>
+
+    <div className="flex space-x-2">
+        <Input className="w-1/3 bg-black text-white mb-2" placeholder="Black background"/>
+        <Input className="w-1/3 bg-yellow-300 mb-2" placeholder="Yellow background"/>
+        <Input className="w-1/3 bg-gray-200 mb-2" placeholder="Gray background"/>
+    </div>
+
+    <div className="flex flex-col">
+        <Input className="h-7 mb-2 text-sm" placeholder="Small"/>
+        <Input className="mb-2" placeholder="Normal"/>
+        <Input className="h-18 text-3xl" placeholder="Large"/>
+    </div>
+</div>`}>
                     <div className="max-w-lg py-6">
                         <div className="flex space-x-2">
                             <Input className="mb-2" placeholder="Normal input"/>
