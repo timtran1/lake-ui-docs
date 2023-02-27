@@ -59,7 +59,179 @@ function MyComponent() {
                     Check out this checkout form:
                 </p>
 
-                <ExampleCodeSection>
+                <ExampleCodeSection
+                    inlineCode={`<div style={{
+    display: 'flex',
+    flexDirection: 'column',
+    maxWidth: '32rem',
+    color: '#fff',
+    marginBottom: '1rem',
+    marginTop: '1.5rem'
+}}>
+
+    <div style={{display: 'flex', marginBottom: '0.5rem'}}>
+        <div style={{width: '50%'}}>
+            <label htmlFor="first-name">First name</label>
+            <Input id="first-name" style={{width: '100%'}} placeholder="First name"/>
+        </div>
+        <div style={{width: '50%', marginLeft: '0.5rem'}}>
+            <label htmlFor="last-name">Last name</label>
+            <Input id="last-name" style={{width: '100%'}} placeholder="Last name"/>
+        </div>
+    </div>
+
+
+    <div style={{width: '100%', marginBottom: '0.5rem'}}>
+        <label htmlFor="address">Address</label>
+        <Input id="address" style={{width: '100%'}} placeholder="Address"/>
+    </div>
+
+
+    <div style={{display: 'flex', marginBottom: '0.5rem'}}>
+        <div style={{width: '33.3%'}}>
+            <label htmlFor="city">City</label>
+            <Input id="city" style={{width: '100%'}} placeholder="City"/>
+        </div>
+        <div style={{width: '33.3%', marginLeft: '0.5rem'}}>
+            <label htmlFor="state">State</label>
+            <Input id="state" style={{width: '100%'}} placeholder="State"/>
+        </div>
+        <div style={{width: '33.3%', marginLeft: '0.5rem'}}>
+            <label htmlFor="last-name">ZIP code</label>
+            <Input id="zip" style={{width: '100%'}} placeholder="ZIP code"/>
+        </div>
+    </div>
+</div>
+
+<Card style={{
+    maxWidth: '32rem',
+    padding: '0.875rem',
+    marginBottom: '1.5rem',
+}}>
+    <div style={{
+        width: '100%',
+        display: 'flex',
+        justifyContent: 'center',
+        marginBottom: '0.75rem',
+        marginTop: '0.75rem'
+    }}>
+        <img src="/visa.png" style={{height: '3rem'}}/>
+        <img src="/Mastercard-logo.svg" style={{height: '3rem', marginLeft: '1rem'}}
+             className="h-12 ml-4"/>
+        <img src="/American_Express_logo.svg" style={{height: '3rem', marginLeft: '1rem'}}/>
+    </div>
+
+    <div style={{width: '100%', marginBottom: '0.5rem'}}>
+        <label htmlFor="card-name">Name on card</label>
+        <Input id="card-name" style={{
+            width: '100%',
+            border: '1px solid #9ca3af',
+            boxShadow: 'none'
+        }} placeholder="Name on card"/>
+    </div>
+
+    <div style={{width: '100%', display: 'flex'}}>
+        <div style={{width: '66.6%'}}>
+            <label htmlFor="card">Card number</label>
+            <Input id="card" style={{
+                width: '100%',
+                border: '1px solid #9ca3af',
+                boxShadow: 'none'
+            }} placeholder="xxxx xxxx xxxx xxxx" maxlength="16"/>
+        </div>
+        <div style={{width: '16.6%', marginLeft: '0.5rem'}}>
+            <label htmlFor="expiry">Expiry</label>
+            <Input id="expiry" style={{
+                width: '100%',
+                border: '1px solid #9ca3af',
+                boxShadow: 'none'
+            }} placeholder="MM/YY"/>
+        </div>
+        <div style={{width: '16.6%', marginLeft: '0.5rem'}}>
+            <label htmlFor="cvv">CVV</label>
+            <Input id="cvv" style={{
+                width: '100%',
+                border: '1px solid #9ca3af',
+                boxShadow: 'none'
+            }} placeholder="123" maxlength="3"/>
+        </div>
+    </div>
+    <Button style={{
+        width: '100%',
+        marginTop: '1rem',
+        backgroundColor: 'black'
+    }}>
+        Checkout
+    </Button>
+</Card>`}
+                    classCode={`<div className="flex flex-col max-w-lg text-white mb-4 mt-6">
+
+    <div className="flex space-x-2 mb-2">
+        <div className="w-1/2">
+            <label htmlFor="first-name">First name</label>
+            <Input id="first-name" className="w-full" placeholder="First name"/>
+        </div>
+        <div className="w-1/2">
+            <label htmlFor="last-name">Last name</label>
+            <Input id="last-name" className="w-full" placeholder="Last name"/>
+        </div>
+    </div>
+
+
+    <div className="w-full mb-2">
+        <label htmlFor="address">Address</label>
+        <Input id="address" className="w-full" placeholder="Address"/>
+    </div>
+
+
+    <div className="flex space-x-2 mb-2">
+        <div className="w-1/3">
+            <label htmlFor="city">City</label>
+            <Input id="city" className="w-full" placeholder="City"/>
+        </div>
+        <div className="w-1/3">
+            <label htmlFor="state">State</label>
+            <Input id="state" className="w-full" placeholder="State"/>
+        </div>
+        <div className="w-1/3">
+            <label htmlFor="last-name">ZIP code</label>
+            <Input id="zip" className="w-full" placeholder="ZIP code"/>
+        </div>
+    </div>
+</div>
+
+<Card className="max-w-lg p-3.5 mb-6">
+    <div className="w-full flex my-3 justify-center">
+        <img src="/visa.png" className="h-12"/>
+        <img src="/Mastercard-logo.svg" className="h-12 ml-4"/>
+        <img src="/American_Express_logo.svg" className="h-12 ml-4"/>
+    </div>
+
+    <div className="w-full mb-2">
+        <label htmlFor="card-name">Name on card</label>
+        <Input id="card-name" className="w-full border border-gray-400 shadow-none"
+               placeholder="Name on card"/>
+    </div>
+
+    <div className="w-full flex space-x-2">
+        <div className="w-full md:w-2/3">
+            <label htmlFor="card">Card number</label>
+            <Input id="card" className="w-full border border-gray-400 shadow-none"
+                   placeholder="xxxx xxxx xxxx xxxx" maxlength="16"/>
+        </div>
+        <div className="w-full md:w-1/6">
+            <label htmlFor="expiry">Expiry</label>
+            <Input id="expiry" className="w-full border border-gray-400 shadow-none"
+                   placeholder="MM/YY"/>
+        </div>
+        <div className="w-full md:w-1/6">
+            <label htmlFor="cvv">CVV</label>
+            <Input id="cvv" className="w-full border border-gray-400 shadow-none" type="password"
+                   placeholder="123" maxlength="3"/>
+        </div>
+    </div>
+    <Button className="w-full mt-4 bg-black">Checkout</Button>
+</Card>`}>
                     <div className="flex flex-col max-w-lg text-white mb-4 mt-6">
 
                         <div className="flex space-x-2 mb-2">
@@ -176,9 +348,9 @@ function MyComponent() {
 
                 <h3 className="text-lg font-semibold mt-8">Props</h3>
                 <p>Any prop can be passed to the componnent, including all <a
-                    href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"
+                    href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes" target="_blank"
                     className={`underline`}>attributes</a> of the regular HTML <code
-                    className={`bg-gray-200 rounded p-1`}>&lt;button&gt;</code> component.</p>
+                    className={`bg-gray-200 rounded p-1`}>&lt;input&gt;</code> component.</p>
                 <table className={`w-full mt-2`}>
                     <thead className={`text-left`}>
                     <tr>
@@ -190,10 +362,10 @@ function MyComponent() {
                     </thead>
                     <tbody>
                     <tr>
-                        <td><code>hoverEffect</code></td>
+                        <td><code>focusEffect</code></td>
                         <td><code>boolean</code></td>
                         <td><code>true</code></td>
-                        <td>An optional flag to enable/disable hover effect. Default is true.</td>
+                        <td>An optional flag to enable/disable focus effect. Default is true.</td>
                     </tr>
                     <tr>
                         <td><code>...other</code></td>
