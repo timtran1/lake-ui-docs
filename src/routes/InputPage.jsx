@@ -34,11 +34,11 @@ function MyComponent() {
 
     return (
         <div className="flex flex-col">
-            <h2 className="text-xl font-bold"><p>Hi {name}!</p></h2>
+            <h2 className="text-4xl text-yellow-100 font-bold"><p>Hi {name}!</p></h2>
             
             {/*input group*/}
             <div className="flex flex-col">
-                <label htmlFor="name" className="text-white mb-0.5">Please input your name</label>
+                <label htmlFor="name" className="text-white mb-0.5">Please enter your name</label>
                 <Input id="name" type="text" value={name} onChange={e => setName(e.target.value)}/>
             </div>
         </div>
@@ -46,7 +46,7 @@ function MyComponent() {
 }`}
                 >
                     <div className="flex flex-col">
-                        <h2 className="text-xl font-bold"><p>Hi {name}!</p></h2>
+                        <h2 className="text-4xl text-yellow-100 font-bold"><p>Hi {name}!</p></h2>
                         <div className="flex flex-col">
                             <label htmlFor="name" className={`text-white mb-0.5`}>Please input your name</label>
                             <Input id="name" type="text" value={name} onChange={e => setName(e.target.value)}/>
@@ -156,9 +156,9 @@ function MyComponent() {
                         </div>
 
                         <div className="flex space-x-2">
+                            <Input className="w-1/3 bg-black text-white mb-2" placeholder="Black background"/>
                             <Input className="w-1/3 bg-yellow-300 mb-2" placeholder="Yellow background"/>
-                            <Input className="w-1/3 bg-lime-400 mb-2" placeholder="Green background"/>
-                            <Input className="w-1/3 bg-red-300 mb-2" placeholder="Red background"/>
+                            <Input className="w-1/3 bg-gray-200 mb-2" placeholder="Gray background"/>
                         </div>
 
                         <div className="flex flex-col">
