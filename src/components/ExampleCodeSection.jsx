@@ -9,10 +9,11 @@ export default function (props) {
     return (
         <Tabs useCurrentTabIndex={[tab, setTab]} tabs={['Example', 'Classes/Tailwind', 'Inline CSS']}>
             <TabPanel index={0} currentTabIndex={tab}>
-                <div className="rounded-md flex justify-center items-center flex-wrap bg-gradient-to-r from-green-400 to-cyan-500 min-h-[200px]">
+                <div className="p-2 rounded-md flex justify-center items-center flex-wrap bg-gradient-to-r from-green-400 to-cyan-500 min-h-[200px]">
                     {props.children}
                 </div>
             </TabPanel>
+             {/*from-amber-300 to-orange-500*/}
 
             <TabPanel index={1} currentTabIndex={tab}>
                 <Code code={props.classCode}/>

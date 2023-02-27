@@ -17,7 +17,7 @@ export default function () {
             <TopBar setSidebarOpen={setSidebarOpen}/>
             <Sidebar useOpen={[sidebarOpen, setSidebarOpen]}/>
 
-            <main className="mx-auto max-w-5xl pt-10 pb-20  px-10">
+            <main className="mx-auto max-w-[800px] pt-10 pb-20 px-6">
                 <h2 className="text-3xl font-bold mb-3">Buttons</h2>
 
                 <h3 className="text-lg font-semibold">Usage</h3>
