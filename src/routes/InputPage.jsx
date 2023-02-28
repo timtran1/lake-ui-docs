@@ -1,16 +1,23 @@
 import ExampleCodeSection from "../components/ExampleCodeSection.jsx";
 import SimpleCodeSection from "../components/SimpleCodeSection.jsx";
-import Input from "../components/base/Input.jsx";
-import {useState} from "react";
+import {
+    Input,
+    Button,
+    Card
+} from '@asynctech/lake-ui'
+import {useEffect, useState} from "react";
 import Sidebar from "../components/Sidebar.jsx";
 import TopBar from "../components/Topbar.jsx";
-import Button from "../components/base/Button.jsx";
-import Card from "../components/base/Card.jsx";
 
 
 export default function () {
     const [sidebarOpen, setSidebarOpen] = useState(false)
     const [name, setName] = useState(``)
+
+    // useEffect(() => {
+    //    console.log( helloWorld())
+    //
+    // }, [])
 
     return (
         <div>
@@ -136,7 +143,7 @@ function MyComponent() {
                 width: '100%',
                 border: '1px solid #9ca3af',
                 boxShadow: 'none'
-            }} placeholder="xxxx xxxx xxxx xxxx" maxlength="16"/>
+            }} placeholder="xxxx xxxx xxxx xxxx" maxLength="16"/>
         </div>
         <div style={{width: '16.6%', marginLeft: '0.5rem'}}>
             <label htmlFor="expiry">Expiry</label>
@@ -152,7 +159,7 @@ function MyComponent() {
                 width: '100%',
                 border: '1px solid #9ca3af',
                 boxShadow: 'none'
-            }} placeholder="123" maxlength="3"/>
+            }} placeholder="123" maxLength="3"/>
         </div>
     </div>
     <Button style={{
@@ -216,7 +223,7 @@ function MyComponent() {
         <div className="w-full md:w-2/3">
             <label htmlFor="card">Card number</label>
             <Input id="card" className="w-full border border-gray-400 shadow-none"
-                   placeholder="xxxx xxxx xxxx xxxx" maxlength="16"/>
+                   placeholder="xxxx xxxx xxxx xxxx" maxLength="16"/>
         </div>
         <div className="w-full md:w-1/6">
             <label htmlFor="expiry">Expiry</label>
@@ -226,7 +233,7 @@ function MyComponent() {
         <div className="w-full md:w-1/6">
             <label htmlFor="cvv">CVV</label>
             <Input id="cvv" className="w-full border border-gray-400 shadow-none" type="password"
-                   placeholder="123" maxlength="3"/>
+                   placeholder="123" maxLength="3"/>
         </div>
     </div>
     <Button className="w-full mt-4 bg-black">Checkout</Button>
@@ -284,7 +291,7 @@ function MyComponent() {
                             <div className="w-full md:w-2/3">
                                 <label htmlFor="card">Card number</label>
                                 <Input id="card" className="w-full border border-gray-400 shadow-none"
-                                       placeholder="xxxx xxxx xxxx xxxx" maxlength="16"/>
+                                       placeholder="xxxx xxxx xxxx xxxx" maxLength="16"/>
                             </div>
                             <div className="w-full md:w-1/6">
                                 <label htmlFor="expiry">Expiry</label>
@@ -294,7 +301,7 @@ function MyComponent() {
                             <div className="w-full md:w-1/6">
                                 <label htmlFor="cvv">CVV</label>
                                 <Input id="cvv" className="w-full border border-gray-400 shadow-none" type="password"
-                                       placeholder="123" maxlength="3"/>
+                                       placeholder="123" maxLength="3"/>
                             </div>
                         </div>
                         <Button className="w-full mt-4 bg-black">Checkout</Button>

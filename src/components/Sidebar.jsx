@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom";
-import Sidebar from "./base/Sidebar.jsx";
+import {Sidebar} from "@asynctech/lake-ui"
 
 export default function (props) {
     return (

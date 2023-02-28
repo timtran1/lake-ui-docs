@@ -1,5 +1,4 @@
-import Tabs from "./base/Tabs.jsx";
-import TabPanel from "./base/TabPanel.jsx";
+import {Tabs, TabPanel} from "@asynctech/lake-ui";
 import Code from "./Code.jsx";
 import {useState} from "react";
 

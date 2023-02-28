@@ -1,5 +1,4 @@
-import TopBar from "./base/TopBar.jsx";
-import Button from "./base/Button.jsx";
+import {TopBar, Button} from "@asynctech/lake-ui";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBars} from "@fortawesome/free-solid-svg-icons";
 

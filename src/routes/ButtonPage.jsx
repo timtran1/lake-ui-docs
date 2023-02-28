@@ -1,4 +1,4 @@
-import Button from "../components/base/Button.jsx";
+import {Button,} from '@asynctech/lake-ui'
 import ExampleCodeSection from "../components/ExampleCodeSection.jsx";
 import TopBar from "../components/Topbar.jsx";
 import Sidebar from "../components/Sidebar.jsx";

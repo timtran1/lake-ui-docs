@@ -1,9 +1,5 @@
-import TopBar from "../components/base/TopBar.jsx";
-import Sidebar from "../components/base/Sidebar.jsx";
-import Button from "../components/base/Button.jsx";
+import {Button,} from '@asynctech/lake-ui'
 import {useState} from "react";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faBars} from "@fortawesome/free-solid-svg-icons";
 
 
 export default function () {
