@@ -9,6 +9,7 @@ export default function (props) {
             <div className={`flex flex-col`}>
                 <Link to={`/button`}>Button</Link>
                 <Link to={`/input`}>Input</Link>
+                <Link to={`/tabs`}>Tabs</Link>
             </div>
         </Sidebar>
     )

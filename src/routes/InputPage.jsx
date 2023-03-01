@@ -14,11 +14,6 @@ export default function () {
     const [sidebarOpen, setSidebarOpen] = useState(false)
     const [name, setName] = useState(``)
 
-    // useEffect(() => {
-    //    console.log( helloWorld())
-    //
-    // }, [])
-
     return (
         <div>
             <TopBar setSidebarOpen={setSidebarOpen}/>
@@ -32,7 +27,7 @@ export default function () {
                     To use the Input component, import it and add it to your JSX code.
                 </p>
 
-                <SimpleCodeSection code={`import Input from "./components/base/Input.jsx";
+                <SimpleCodeSection code={`import {Input} from "@asynctech/lake-ui";
 import {useState} from "react";
 
 function MyComponent() {

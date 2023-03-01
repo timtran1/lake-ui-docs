@@ -2,6 +2,7 @@ import {createBrowserRouter} from "react-router-dom";
 import Home from "./routes/Home.jsx";
 import ButtonPage from "./routes/ButtonPage.jsx";
 import InputPage from "./routes/InputPage.jsx";
+import TabsPage from "./routes/TabsPage.jsx";
 
 export default createBrowserRouter([
     {
@@ -16,5 +17,9 @@ export default createBrowserRouter([
     {
         path: "/input",
         element: <InputPage/>,
+    },
+    {
+        path: "/tabs",
+        element: <TabsPage/>,
     }
 ])
