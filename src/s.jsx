@@ -1,30 +1,83 @@
-<div className="max-w-lg py-6">
-    <div className="flex space-x-2">
-        <Input className="mb-2" placeholder="Normal input"/>
-        <Input className="border border-gray-400 mb-2" placeholder="Input with border"/>
-    </div>
-    <div>
-        <Input className="w-[100px] mr-2 mb-2" placeholder="Short input"/>
-        <Input className="w-[250px] mb-2" placeholder="Long input"/>
-    </div>
-    <div className="mb-2">
-        <Input className="w-full" placeholder="Full width input"/>
-    </div>
+<div className="py-6">
+    <h4 className="text-white font-bold text-xl my-2">Tabs with custom background color</h4>
+    <Tabs
+        style={{backgroundColor: '#60a5fa'}}
+        useCurrentTabIndex={[tabIndex, setTabIndex]}
+        tabs={['Tab 0', 'Tab 1', 'Tab 2']}
+    >
+        <TabPanel index={0} currentTabIndex={tabIndex}>
+            Tab 0 content here
+        </TabPanel>
+        <TabPanel index={1} currentTabIndex={tabIndex}>
+            Tab 1 content here
+        </TabPanel>
+        <TabPanel index={2} currentTabIndex={tabIndex}>
+            Tab 2 content here
+        </TabPanel>
+    </Tabs>
 
-    <div className="flex space-x-2">
-        <Input className="w-1/2 rounded-full mb-2" placeholder="Rounded input"/>
-        <Input className="w-1/2 rounded-none mb-2" placeholder="Square input"/>
-    </div>
+    <h4 className="text-white font-bold text-xl mb-2 mt-8">Glassy tabs</h4>
+    <Tabs
+        style={{
+            backgroundColor: 'rgba(255, 255, 255, 0.3)',
+            backdropFilter: 'blur(4px)',
+            marginBottom: '0.25rem',
+        }}
+        useCurrentTabIndex={[tabIndex, setTabIndex]}
+        tabs={['Tab 0', 'Tab 1', 'Tab 2']}
+    >
+        <TabPanel style={{
+            backgroundColor: 'white',
+            padding: '1.25rem',
+            borderRadius: '0.375rem',
+        }} index={0} currentTabIndex={tabIndex}>
+            Tab 0 content here
+        </TabPanel>
+        <TabPanel style={{
+            backgroundColor: 'white',
+            padding: '1.25rem',
+            borderRadius: '0.375rem',
+        }} index={1} currentTabIndex={tabIndex}>
+            Tab 1 content here
+        </TabPanel>
+        <TabPanel style={{
+            backgroundColor: 'white',
+            padding: '1.25rem',
+            borderRadius: '0.375rem',
+        }} index={2} currentTabIndex={tabIndex}>
+            Tab 2 content here
+        </TabPanel>
+    </Tabs>
 
-    <div className="flex space-x-2">
-        <Input className="w-1/3 bg-black text-white mb-2" placeholder="Black background"/>
-        <Input className="w-1/3 bg-yellow-300 mb-2" placeholder="Yellow background"/>
-        <Input className="w-1/3 bg-gray-200 mb-2" placeholder="Gray background"/>
-    </div>
-
-    <div className="flex flex-col">
-        <Input className="h-7 mb-2 text-sm" placeholder="Small"/>
-        <Input className="mb-2" placeholder="Normal"/>
-        <Input className="h-18 text-3xl" placeholder="Large"/>
-    </div>
+    <h4 className="text-white font-bold text-xl mb-2 mt-12">Tabs with custom TabPanel style</h4>
+    <Tabs
+        style={{marginBottom: '0.25rem'}}
+        useCurrentTabIndex={[tabIndex, setTabIndex]}
+        tabs={['Tab 0', 'Tab 1', 'Tab 2']}
+    >
+        <TabPanel style={{
+            color: 'white',
+            backgroundColor: '#4f46e5',
+            padding: '1.25rem',
+            borderRadius: '0.375rem',
+        }} index={0} currentTabIndex={tabIndex}>
+            Tab 0 content here
+        </TabPanel>
+        <TabPanel style={{
+            color: 'white',
+            backgroundColor: '#4f46e5',
+            padding: '1.25rem',
+            borderRadius: '0.375rem',
+        }} index={1} currentTabIndex={tabIndex}>
+            Tab 1 content here
+        </TabPanel>
+        <TabPanel style={{
+            color: 'white',
+            backgroundColor: '#4f46e5',
+            padding: '1.25rem',
+            borderRadius: '0.375rem',
+        }} index={2} currentTabIndex={tabIndex}>
+            Tab 2 content here
+        </TabPanel>
+    </Tabs>
 </div>
