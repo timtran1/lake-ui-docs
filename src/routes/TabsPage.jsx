@@ -257,6 +257,73 @@ export default function () {
                     </div>
                 </ExampleCodeSection>
 
+                <h3 className="text-lg font-semibold mt-8">Tabs Props</h3>
+                <p>Any prop can be passed to the component, including component.</p>
+                <table className={`w-full mt-2`}>
+                    <thead className={`text-left`}>
+                    <tr>
+                        <th>Prop name</th>
+                        <th>Type</th>
+                        <th>Default value</th>
+                        <th>Description</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><code>tabs</code></td>
+                        <td><code>array</code></td>
+                        <td><code></code></td>
+                        <td>Array of strings that define the tabs to be displayed.</td>
+                    </tr>
+                    <tr>
+                        <td><code>useCurrentTabIndex</code></td>
+                        <td><code>array</code></td>
+                        <td><code></code></td>
+                        <td>React <code>useState</code> hook array for the current tab index, an integer.</td>
+                    </tr>
+                    <tr>
+                        <td><code>...other</code></td>
+                        <td><code>any</code></td>
+                        <td></td>
+                        <td>Any additional props passed to the component will be spread here.</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+
+                <h3 className="text-lg font-semibold mt-8">Tab Panel Props</h3>
+                <p>Any prop can be passed to the component, including component.</p>
+                <table className={`w-full mt-2`}>
+                    <thead className={`text-left`}>
+                    <tr>
+                        <th>Prop name</th>
+                        <th>Type</th>
+                        <th>Default value</th>
+                        <th>Description</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><code>index</code></td>
+                        <td><code>integer</code></td>
+                        <td><code></code></td>
+                        <td>Unique index number for this TabPanel.</td>
+                    </tr>
+                    <tr>
+                        <td><code>currentTabIndex</code></td>
+                        <td><code>integer</code></td>
+                        <td><code></code></td>
+                        <td>The current tab index.</td>
+                    </tr>
+                    <tr>
+                        <td><code>...other</code></td>
+                        <td><code>any</code></td>
+                        <td></td>
+                        <td>Any additional props passed to the component will be spread here.</td>
+                    </tr>
+                    </tbody>
+                </table>
+
             </main>
         </div>
     )
