@@ -27,10 +27,28 @@ export default function () {
 
                 <ExampleCodeSection>
                     <div className="py-6">
-                        <Card  className="w-[400px]">
-                            <h3 className="text-3xl">Moraine</h3>
-                            <img src="/moraine.jpg" alt="" className="w-full"/>
-                            <div>Moraine Lake is a glacially fed lake in Banff National Park</div>
+                        <Card className="w-[300px] p-4 border-none">
+                            <h3 className="text-4xl">A simple card</h3>
+                            <div>Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                            </div>
+                            <Button className="bg-black mt-2">Do something</Button>
+                        </Card>
+
+                        <Card className="w-[350px] p-0 border-none mt-8">
+                            <h3 className="text-4xl p-3">Moraine</h3>
+                            <img src="/moraine_rsz.jpg" alt="" className="w-full"/>
+                            <div className="p-3">Moraine Lake is a glacially fed lake in Banff National Park. The lake,
+                                being glacially fed, does not reach its crest until middle to late June. When it is
+                                full, it reflects a distinctive shade of azure blue.
+                            </div>
+                        </Card>
+
+                        <Card className="w-[350px] p-0 border-none mt-8">
+                            <img src="/blausee_rsz.jpg" alt="" className="w-full rounded-t"/>
+                            <h3 className="text-4xl px-3 pt-3">Blausee</h3>
+                            <div className="p-3">Blausee is a lake located near the Kander river. The lake has an
+                                elevation of 887 metres (2,910 ft) and an area of 0.64 hectares (1.6 acres).
+                            </div>
                         </Card>
                     </div>
                 </ExampleCodeSection>
