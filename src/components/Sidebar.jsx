@@ -1,6 +1,5 @@
 import {Link} from "react-router-dom";
 import {Sidebar} from "@asynctech/lake-ui"
-import Card from "../components/base/Card.jsx";
 
 export default function (props) {
     return (
