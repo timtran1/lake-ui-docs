@@ -1,42 +1,67 @@
-import {Button, Card, Input, TabPanel, Tabs} from '@asynctech/lake-ui'
+import {Button, Card, Input, TabPanel, Tabs, Toast} from '@asynctech/lake-ui'
 import {useState} from "react";
 import TopBar from "../components/Topbar.jsx";
 import Sidebar from "../components/Sidebar.jsx";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faCopy} from "@fortawesome/free-solid-svg-icons";
 
 import '../assets/css/home.css'
 
 
 export default function () {
     const [sidebarOpen, setSidebarOpen] = useState(false)
+    const [copyToastOpen, setCopyToastOpen] = useState(false)
     const [tabIndex, setTabIndex] = useState(0)
+    const [getStarted, setGetStarted] = useState('npm install @asynctech/lake-ui')
+
+    function copyToClipboard() {
+        navigator.clipboard.writeText(getStarted);
+        setCopyToastOpen(true)
+    }
 
     return (
         <div>
             <TopBar setSidebarOpen={setSidebarOpen}/>
             <Sidebar useOpen={[sidebarOpen, setSidebarOpen]}/>
+            <Toast className={`text-white bg-green-500 p-1 pl-2`} useOpen={[copyToastOpen, setCopyToastOpen]}>
+                Copied!
+            </Toast>
 
             <main className={`w-screen h-screen bg-gray-50`}>
 
-                <div className={`flex m-auto max-w-7xl pt-20`}>
-                    <div className={`w-1/3`}>
+                <div className={`flex flex-wrap m-auto max-w-7xl pt-20`}>
+                    <div className={`md:w-1/3 sm:w-full px-3`}>
                         <h1 className={`text-5xl font-bold mb-3`}>Lake UI</h1>
                         <h2 className={` text-2xl`}>
                             Modern React UI components <br/>
                             fully customizable <br/>
                             with inline CSS, CSS classes, and Tailwind classes</h2>
                         <div className={`flex py-4`}>
-                            <Button className={`mr-1 py-2.5 px-5 bg-black font-bold`}>Get started</Button>
-                            <Button
-                                className={`ml-1 py-2.5 px-5 text-black bg-gray-200/30 backdrop-blur-sm`}>Components</Button>
+                            <Button className={`mr-1 py-2.5 px-5 bg-black font-bold`}>See Components</Button>
+                            {/*<Button*/}
+                            {/*    className={`ml-1 py-2.5 px-5 text-black bg-gray-200/30 backdrop-blur-sm`}>Components</Button>*/}
                         </div>
 
                         <div className={`pt-4`}>
-                            <div>Quick Search</div>
-                            <Input className={`border border-gray-300 shadow-none h-12 text-lg`} placeholder="CmD + K"/>
+                            <div className={`font-semibold`}>Get Started</div>
+                            <div className={`flex`}>
+                                <Input className="border border-gray-400 flex-grow" value={getStarted} disabled/>
+                                <Button className={`ml-1 text-green-700 border border-green-500 bg-green-100 text-sm`}
+                                        onClick={copyToClipboard}>
+                                    <FontAwesomeIcon icon={faCopy}/>
+                                    <span className={`ml-1`}>Copy</span>
+                                </Button>
+                            </div>
+                        </div>
+
+                        <div className={`pt-4 flex`}>
+                            <img src="/ts.svg" alt="" className="w-10 h-10 rounded-md"/>
+                            <img src="/js.svg" alt="" className="w-10 h-10 rounded-md ml-1"/>
+                            <img src="/react.svg" alt="" className="w-10 h-10 rounded-md ml-1"/>
                         </div>
                     </div>
 
-                    <div className={`w-2/3 bg-gradient-to-r from-green-400 to-cyan-500 rounded-md shadow p-4 pt-6`}>
+                    <div className={`md:w-2/3 bg-gradient-to-r from-green-400 to-cyan-500 rounded-md shadow p-4 pt-6`}>
 
                         <div className={`max-w-xs float-10`}>
                             <Tabs
