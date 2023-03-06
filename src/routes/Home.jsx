@@ -4,6 +4,7 @@ import TopBar from "../components/Topbar.jsx";
 import Sidebar from "../components/Sidebar.jsx";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCopy} from "@fortawesome/free-solid-svg-icons";
+// import {Link} from "react-router-dom";
 
 import '../assets/css/home.css'
 
@@ -27,17 +28,21 @@ export default function () {
                 Copied!
             </Toast>
 
-            <main className={`w-screen h-screen bg-gray-50`}>
+            <main className={`w-screen h-screen bg-gray-50 relative overflow-x-hidden`}>
 
-                <div className={`flex flex-wrap m-auto max-w-7xl pt-20`}>
+                <div className={`flex flex-wrap m-auto max-w-7xl pt-20 text-center md:text-left justify-center`}>
                     <div className={`md:w-1/3 sm:w-full px-3`}>
                         <h1 className={`text-5xl font-bold mb-3`}>Lake UI</h1>
                         <h2 className={` text-2xl`}>
                             Modern React UI components <br/>
                             fully customizable <br/>
                             with inline CSS, CSS classes, and Tailwind classes</h2>
-                        <div className={`flex py-4`}>
-                            <Button className={`mr-1 py-2.5 px-5 bg-black font-bold`}>See Components</Button>
+                        <div className={`flex py-4 justify-center md:justify-start`}>
+                            {/*<Link to={`/card`}>*/}
+                            <Button className={`mr-1 py-2.5 px-5 bg-black font-bold`}
+                                    onClick={() => setSidebarOpen(true)}>See Components</Button>
+                            {/*</Link>*/}
+
                             {/*<Button*/}
                             {/*    className={`ml-1 py-2.5 px-5 text-black bg-gray-200/30 backdrop-blur-sm`}>Components</Button>*/}
                         </div>
@@ -54,14 +59,14 @@ export default function () {
                             </div>
                         </div>
 
-                        <div className={`pt-4 flex`}>
+                        <div className={`py-4 flex justify-center md:justify-start`}>
                             <img src="/ts.svg" alt="" className="w-10 h-10 rounded-md"/>
                             <img src="/js.svg" alt="" className="w-10 h-10 rounded-md ml-1"/>
                             <img src="/react.svg" alt="" className="w-10 h-10 rounded-md ml-1"/>
                         </div>
                     </div>
 
-                    <div className={`md:w-2/3 bg-gradient-to-r from-green-400 to-cyan-500 rounded-md shadow p-4 pt-6`}>
+                    <div className={`md:w-2/3 bg-gradient-to-r from-green-400 to-cyan-500 rounded-md shadow p-4 pt-6 z-30`}>
 
                         <div className={`max-w-xs float-10`}>
                             <Tabs
@@ -128,7 +133,15 @@ export default function () {
 
                 </div>
 
+                <div className="ocean hidden md:block">
+                    <div className="wave"></div>
+                    <div className="wave"></div>
+                    <div className="wave"></div>
+                    <div className="wave"></div>
+                </div>
             </main>
+
+
         </div>
     )
 }
