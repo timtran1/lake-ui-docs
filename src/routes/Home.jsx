@@ -28,7 +28,7 @@ export default function () {
                 Copied!
             </Toast>
 
-            <main className={`w-screen h-screen bg-gray-50 relative overflow-x-hidden`}>
+            <main className={`w-screen h-screen bg-gray-50 relative overflow-hidden`}>
 
                 <div className={`flex flex-wrap m-auto max-w-7xl pt-20 text-center md:text-left justify-center`}>
                     <div className={`md:w-1/3 sm:w-full px-3`}>

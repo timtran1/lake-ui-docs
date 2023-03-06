@@ -27,7 +27,7 @@
 
 .float-7 {
     transition: all .25s ease;
-    animation: float 7s ease infinite reverse
+    animation: float 11s ease infinite reverse
 }
 
 .ocean {
@@ -53,13 +53,13 @@
 .wave:nth-of-type(2) {
     background: url(/wave3.svg) repeat-x;
     transform: translateX(350px);
-    animation: wave 35s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.125s infinite;
+    animation: wave 27s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.125s infinite;
     animation-delay: 6s;
 }
 
 .wave:nth-of-type(3) {
     background: url(/wave4.svg) repeat-x;
-    animation: wave 35s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.125s infinite;
+    animation: wave 38s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.125s infinite;
     transform: translateX(250px);
     animation-delay: 3s;
 }
@@ -73,7 +73,7 @@
 
 .wave:nth-of-type(5) {
     background: url(/wave6.svg) repeat-x;
-    animation: wave 35s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+    animation: wave 30s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
     transform: translateX(650px);
     animation-delay: 8s;
 }
