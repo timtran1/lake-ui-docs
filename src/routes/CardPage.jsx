@@ -4,8 +4,8 @@ import TopBar from "../components/Topbar.jsx";
 import Sidebar from "../components/Sidebar.jsx";
 import {useState} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faStar, faCartPlus} from "@fortawesome/free-solid-svg-icons";
-import {faStarHalfStroke} from "@fortawesome/free-regular-svg-icons";
+import {faStar, faCartPlus, faHeart, faShareAlt} from "@fortawesome/free-solid-svg-icons";
+import {faStarHalfStroke, faCommentAlt} from "@fortawesome/free-regular-svg-icons";
 // import Card from "../components/base/Card.jsx";
 
 export default function () {
@@ -52,9 +52,12 @@ export default function () {
                 </ExampleCodeSection>
 
 
-                <h3 className="text-lg font-semibold">Styling variations</h3>
+                <h3 className="text-lg font-semibold mt-4">Styling variations</h3>
                 <p className="mb-4">
-                    To use the Card component, simply import it and add it to your JSX code.
+                    Here are some examples of how you can style the Card component. Some of the examples below are
+                    inspired by the <a
+                    href="https://vuesax.com/" className={`underline`}>Vuesax</a> library, which used to be my go-to UI
+                    library until it was discontinued.
                 </p>
                 <ExampleCodeSection>
                     <div className="py-6 flex w-full flex-wrap justify-around">
@@ -116,9 +119,89 @@ export default function () {
                             </div>
 
 
-                                <Button className="bg-black w-full rounded-none">BUY NOW</Button>
+                            <Button className="bg-black w-full rounded-none">BUY NOW</Button>
 
                         </Card>
+
+
+                        <Card className="w-[300px] p-0 group rounded-xl mt-6">
+                            <div className="w-full h-[250px] overflow-hidden rounded-xl relative">
+                                <img src="/model1.jpg"
+                                     className="w-full group-hover:scale-125 transition-all duration-300"/>
+                                <div className="flex absolute left-0 bottom-0 p-3">
+                                    <Button className="rounded-xl px-2 py-1 bg-red-500">
+                                        <FontAwesomeIcon icon={faHeart}/>
+                                    </Button>
+                                    <Button className="rounded-xl ml-2 bg-white text-black px-2.5 py-1 text-sm">
+                                        <FontAwesomeIcon className="mr-1" icon={faCommentAlt}/>
+                                        32
+                                    </Button>
+                                    <Button className="rounded-xl ml-2 px-2.5 py-1 bg-black">
+                                        <FontAwesomeIcon icon={faShareAlt}/>
+                                    </Button>
+                                </div>
+                            </div>
+                            <div className="p-3">
+                                <h3 className="font-semibold text-lg">Finibus Bonorum et Malorum</h3>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                                </div>
+                            </div>
+                        </Card>
+
+                        <Card className="flex h-[280px] p-0 group rounded-xl mt-6">
+                            <div className="h-full flex-grow overflow-hidden rounded-xl relative">
+                                <img src="/model2.jpg"
+                                     className="h-full group-hover:scale-125 transition-all duration-300"/>
+                                <div className="flex absolute left-0 bottom-0 p-3">
+                                    <Button className="rounded-xl px-2 py-1 bg-red-500">
+                                        <FontAwesomeIcon icon={faHeart}/>
+                                    </Button>
+                                    <Button className="rounded-xl ml-2 bg-white text-black px-2.5 py-1 text-sm">
+                                        <FontAwesomeIcon className="mr-1" icon={faCommentAlt}/>
+                                        26
+                                    </Button>
+                                    <Button className="rounded-xl ml-2 px-2.5 py-1 bg-black">
+                                        <FontAwesomeIcon icon={faShareAlt}/>
+                                    </Button>
+                                </div>
+                            </div>
+
+                            <div className="p-3 flex-grow max-w-[200px]">
+                                <h3 className="font-semibold text-lg">Finibus Bonorum et Malorum</h3>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                                </div>
+                            </div>
+
+                        </Card>
+
+
+                        <Card
+                            className="group relative mt-6 w-[300px] p-0 overflow-hidden rounded-tl-lg rounded-tr-2xl rounded-bl-2xl hover:rounded-bl-[40px] hover:rounded-tr-[40px]">
+                            <div className="w-full overflow-hidden z-0 relative">
+                                <img src="/model3.jpg" alt=""/>
+                                <div className="flex absolute left-0 bottom-0 p-3  group-hover:-translate-y-20 transition-all duration-300">
+                                    <Button className="rounded-xl px-2 py-1 bg-red-500">
+                                        <FontAwesomeIcon icon={faHeart}/>
+                                    </Button>
+                                    <Button className="rounded-xl ml-2 bg-white text-black px-2.5 py-1 text-sm">
+                                        <FontAwesomeIcon className="mr-1" icon={faCommentAlt}/>
+                                        56
+                                    </Button>
+                                    <Button className="rounded-xl ml-2 px-2.5 py-1 bg-black">
+                                        <FontAwesomeIcon icon={faShareAlt}/>
+                                    </Button>
+                                </div>
+                            </div>
+
+                            <div
+                                className="absolute z-10 left-8 bottom-2 translate-y-10 bg-white rounded-lg p-3 transition-all duration-300 group-hover:translate-y-0 opacity-0 group-hover:opacity-100">
+                                <h3 className="font-semibold">Finibus Bonorum et Malorum</h3>
+                                <div>Lorem ipsum dolor sit amet</div>
+                            </div>
+                        </Card>
+
 
                     </div>
                 </ExampleCodeSection>
