@@ -6,14 +6,10 @@ import {useState} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faStar, faCartPlus, faHeart, faShareAlt} from "@fortawesome/free-solid-svg-icons";
 import {faStarHalfStroke, faCommentAlt} from "@fortawesome/free-regular-svg-icons";
-// import Card from "../components/base/Card.jsx";
+
 
 export default function () {
     const [sidebarOpen, setSidebarOpen] = useState(false)
-
-    function handleClick() {
-        alert('Button clicked!');
-    }
 
     return (
         <div>
@@ -62,8 +58,12 @@ export default function () {
                 <ExampleCodeSection>
                     <div className="py-6 flex w-full flex-wrap justify-around">
 
-                        <Card className="w-[250px] p-0">
-                            <img src="/shoes.jpg" alt="" className="w-full rounded-t"/>
+                        <Card className="w-[250px] p-0 group">
+                            <div className="overflow-hidden w-full rounded-t">
+                                <img src="/shoes.jpg" alt=""
+                                     className="group-hover:scale-110 transition-all duration-300"/>
+                            </div>
+
                             <div className="p-3">
                                 <div className="flex justify-between items-center mb-1">
                                     <div className="text-xl">AIR<span className="font-semibold">DUNKERS</span></div>
@@ -101,26 +101,19 @@ export default function () {
                             </div>
                         </Card>
 
-                        <Card className="rounded-none w-[280px]  mt-16">
-                            <img src="/watch.jpg" className="w-[240px] -mt-16 m-auto"/>
-                            <div className="mt-2 text-center text-xl font-black pt-2">Tempus Nova</div>
-                            <div className="text-center font-semibold">$14,000</div>
-                            <div className="text-center text-sm">Experience the ultimate fusion of style and technology
+                        <Card className="rounded-none w-[280px] p-0 mt-16 group relative">
+                            <div className="w-[220px] -mt-16 m-auto overflow-hidden">
+                                <img src="/watch.jpg" className="w-full group-hover:scale-110 transition-all duration-300"/>
+                            </div>
+                            <div className="mt-2 text-center text-3xl pt-2">Tempus Nova</div>
+                            <div className="text-center italic">$12,000</div>
+                            <div className="text-center text-sm p-2">Experience the ultimate fusion of style and technology
                                 with the Tempus Nova watch.
                                 Crafted with precision engineering, this timepiece features state-of-the-art materials
                                 that ensure unparalleled durability and accuracy.
                             </div>
-                            <div className="text-sm py-1 font-semibold text-gray-600">COLOR OPTIONS</div>
-                            <div className="flex">
-                                <Button className="h-6 w-6 p-0 bg-green-500 rounded-none"></Button>
-                                <Button className="h-6 w-6 p-0 bg-green-500 rounded-none ml-1"></Button>
-                                <Button className="h-6 w-6 p-0 bg-green-500 rounded-none ml-1"></Button>
-                                <Button className="h-6 w-6 p-0 bg-green-500 rounded-none ml-1"></Button>
-                            </div>
 
-
-                            <Button className="bg-black w-full rounded-none">BUY NOW</Button>
-
+                            <Button className="bg-black w-full rounded-none absolute bottom-0 left-0" hoverEffect={false}>BUY NOW</Button>
                         </Card>
 
 
@@ -161,9 +154,6 @@ export default function () {
                                         <FontAwesomeIcon className="mr-1" icon={faCommentAlt}/>
                                         26
                                     </Button>
-                                    <Button className="rounded-xl ml-2 px-2.5 py-1 bg-black">
-                                        <FontAwesomeIcon icon={faShareAlt}/>
-                                    </Button>
                                 </div>
                             </div>
 
@@ -181,16 +171,14 @@ export default function () {
                             className="group relative mt-6 w-[300px] p-0 overflow-hidden rounded-tl-lg rounded-tr-2xl rounded-bl-2xl hover:rounded-bl-[40px] hover:rounded-tr-[40px]">
                             <div className="w-full overflow-hidden z-0 relative">
                                 <img src="/model3.jpg" alt=""/>
-                                <div className="flex absolute left-0 bottom-0 p-3  group-hover:-translate-y-20 transition-all duration-300">
+                                <div
+                                    className="flex absolute left-0 bottom-0 p-3  group-hover:-translate-y-20 transition-all duration-300">
                                     <Button className="rounded-xl px-2 py-1 bg-red-500">
                                         <FontAwesomeIcon icon={faHeart}/>
                                     </Button>
                                     <Button className="rounded-xl ml-2 bg-white text-black px-2.5 py-1 text-sm">
                                         <FontAwesomeIcon className="mr-1" icon={faCommentAlt}/>
                                         56
-                                    </Button>
-                                    <Button className="rounded-xl ml-2 px-2.5 py-1 bg-black">
-                                        <FontAwesomeIcon icon={faShareAlt}/>
                                     </Button>
                                 </div>
                             </div>
@@ -208,10 +196,6 @@ export default function () {
 
 
                 <h3 className="text-lg font-semibold mt-8">Props</h3>
-                <p>Any prop can be passed to the componnent, including all <a
-                    href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"
-                    className={`underline`}>attributes</a> of the regular HTML <code
-                    className={`bg-gray-200 rounded p-1`}>&lt;button&gt;</code> component.</p>
                 <table className={`w-full mt-2`}>
                     <thead className={`text-left`}>
                     <tr>

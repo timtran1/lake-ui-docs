@@ -258,7 +258,6 @@ export default function () {
                 </ExampleCodeSection>
 
                 <h3 className="text-lg font-semibold mt-8">Tabs Props</h3>
-                <p>Any prop can be passed to the component, including component.</p>
                 <table className={`w-full mt-2`}>
                     <thead className={`text-left`}>
                     <tr>
@@ -292,7 +291,6 @@ export default function () {
 
 
                 <h3 className="text-lg font-semibold mt-8">Tab Panel Props</h3>
-                <p>Any prop can be passed to the component, including component.</p>
                 <table className={`w-full mt-2`}>
                     <thead className={`text-left`}>
                     <tr>
