@@ -29,7 +29,7 @@ export default function () {
                 Copied!
             </Toast>
 
-            <main className={`w-screen h-screen bg-gray-50 relative overflow-hidden`}>
+            <main className={`w-screen md:h-screen bg-gray-50 relative overflow-hidden`}>
 
                 <div className={`flex flex-wrap m-auto max-w-7xl pt-20 text-center md:text-left justify-ar`}>
                     <div className={`md:w-1/3 sm:w-full px-3`}>
@@ -70,7 +70,7 @@ export default function () {
                     <div
                         className={`flex flex-wrap items-center justify-around md:w-2/3 bg-gradient-to-r from-green-400 to-cyan-500 rounded-md shadow p-4 pt-6 z-30`}>
 
-                        <Card className="float w-[200px] p-0 group">
+                        <Card className="float mt-2 w-[200px] p-0 group">
                             <div className="overflow-hidden w-full rounded-t">
                                 <img src="/shoes.jpg" alt=""
                                      className="group-hover:scale-110 transition-all duration-300"/>
@@ -113,7 +113,7 @@ export default function () {
                             </div>
                         </Card>
 
-                        <Card className="float w-[250px] p-0 group rounded-xl">
+                        <Card className="float mt-2 w-[250px] p-0 group rounded-xl">
                             <div className="w-full h-[250px] overflow-hidden rounded-xl relative">
                                 <img src="/model1.jpg"
                                      className="w-full group-hover:scale-125 transition-all duration-300"/>
@@ -137,7 +137,7 @@ export default function () {
                             </div>
                         </Card>
 
-                        <div className={`float max-w-xs`}>
+                        <div className={`float mt-2 max-w-xs`}>
                             <Tabs
                                 className="max-w-xs backdrop-blur-sm bg-white/30 mb-1 "
                                 useCurrentTabIndex={[tabIndex, setTabIndex]}
@@ -163,7 +163,7 @@ export default function () {
 
 
                         <Card
-                            className="float group relative w-[280px] p-0 overflow-hidden rounded-tl-lg rounded-tr-2xl rounded-bl-2xl hover:rounded-bl-[40px] hover:rounded-tr-[40px]">
+                            className="float mt-2 group relative w-[280px] p-0 overflow-hidden rounded-tl-lg rounded-tr-2xl rounded-bl-2xl hover:rounded-bl-[40px] hover:rounded-tr-[40px]">
                             <div className="w-full overflow-hidden z-0 relative">
                                 <img src="/model3.jpg" alt=""/>
                                 <div
@@ -186,7 +186,7 @@ export default function () {
                         </Card>
 
 
-                        <div className={`float`}>
+                        <div className={`float mt-2`}>
                             <Card className="max-w-sm p-3.5 mb-6">
                                 <h3 className={`font-semibold text-center`}>Sample checkout</h3>
                                 <div className="w-full flex my-3 justify-center">

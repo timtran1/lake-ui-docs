@@ -19,17 +19,7 @@ export default function (props) {
 
             <div className={`pr-3 flex`}>
                 <a href="https://github.com/timtran1/lake-ui" target="_blank" className={`block`}>
-                    <div className={`flex items-center p-2`}>
-                        <img className={`h-5 mr-1.5`} src="/github.png"/>
-                        <div className={``}>GitHub</div>
-                    </div>
-                </a>
-
-                <a href="https://github.com/timtran1/lake-ui-docs" target="_blank" className={`block`}>
-                    <div className={`flex items-center p-2`}>
-                        <img className={`h-5 mr-1.5`} src="/github.png"/>
-                        <div className={``}>Docs GitHub</div>
-                    </div>
+                    <img className={`h-5 mr-1.5`} src="/github.png"/>
                 </a>
             </div>
         </TopBar>
