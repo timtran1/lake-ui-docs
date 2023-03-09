@@ -3,10 +3,11 @@ import {useState} from "react";
 import TopBar from "../components/Topbar.jsx";
 import Sidebar from "../components/Sidebar.jsx";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faCopy} from "@fortawesome/free-solid-svg-icons";
+import {faCartPlus, faCopy, faHeart, faShareAlt, faStar} from "@fortawesome/free-solid-svg-icons";
 // import {Link} from "react-router-dom";
 
 import '../assets/css/home.css'
+import {faCommentAlt, faStarHalfStroke} from "@fortawesome/free-regular-svg-icons";
 
 
 export default function () {
@@ -30,7 +31,7 @@ export default function () {
 
             <main className={`w-screen h-screen bg-gray-50 relative overflow-hidden`}>
 
-                <div className={`flex flex-wrap m-auto max-w-7xl pt-20 text-center md:text-left justify-center`}>
+                <div className={`flex flex-wrap m-auto max-w-7xl pt-20 text-center md:text-left justify-ar`}>
                     <div className={`md:w-1/3 sm:w-full px-3`}>
                         <h1 className={`text-5xl font-bold mb-3`}>Lake UI</h1>
                         <h2 className={` text-2xl`}>
@@ -66,11 +67,79 @@ export default function () {
                         </div>
                     </div>
 
-                    <div className={`md:w-2/3 bg-gradient-to-r from-green-400 to-cyan-500 rounded-md shadow p-4 pt-6 z-30`}>
+                    <div
+                        className={`flex flex-wrap items-center justify-around md:w-2/3 bg-gradient-to-r from-green-400 to-cyan-500 rounded-md shadow p-4 pt-6 z-30`}>
 
-                        <div className={`max-w-xs float-10`}>
+                        <Card className="float w-[200px] p-0 group">
+                            <div className="overflow-hidden w-full rounded-t">
+                                <img src="/shoes.jpg" alt=""
+                                     className="group-hover:scale-110 transition-all duration-300"/>
+                            </div>
+
+                            <div className="p-3">
+                                <div className="flex flex-wrap justify-between items-center mb-1">
+                                    <div className="text-xl">AIR<span className="font-semibold">DUNKERS</span></div>
+                                    <Card className="bg-black border-0 text-white">$<span
+                                        className="font-black">299.99</span></Card>
+                                </div>
+                                <div className="text-sm text-gray-600">X-ATHELETE COLLECTION</div>
+                                <div className="flex text-xs py-1 text-amber-400">
+                                    <FontAwesomeIcon icon={faStar}/>
+                                    <FontAwesomeIcon icon={faStar}/>
+                                    <FontAwesomeIcon icon={faStar}/>
+                                    <FontAwesomeIcon icon={faStar}/>
+                                    <FontAwesomeIcon icon={faStarHalfStroke}/>
+                                </div>
+                                <div className="text-sm py-1 font-semibold text-gray-600">SIZE</div>
+                                <div className="flex ">
+                                    <Button className="rounded-full h-8 w-8 bg-transparent text-black"><small>6</small></Button>
+                                    <Button className="rounded-full h-8 w-8 bg-transparent text-black"><small>7</small></Button>
+                                    <Button className="rounded-full h-8 w-8 bg-transparent text-black"><small>8</small></Button>
+                                    <Button className="rounded-full h-8 w-8 bg-red-500"><small>9</small></Button>
+                                    <Button className="rounded-full h-8 w-8 bg-transparent text-black"><small>10</small></Button>
+                                </div>
+                                <div className="text-sm py-1 font-semibold text-gray-600">COLOR</div>
+                                <div className="flex justify-between">
+                                    <div className="flex">
+                                        <div><Button
+                                            className="rounded-full h-6 w-6 p-0 bg-indigo-400"></Button></div>
+                                        <div className="ml-1"><Button
+                                            className="rounded-full h-6 w-6 p-0 bg-green-500"></Button></div>
+                                        <div className="border-b-4 border-b-yellow-400 ml-1 pb-1"><Button
+                                            className="rounded-full h-6 w-6 p-0 bg-yellow-400"></Button></div>
+                                    </div>
+                                    <Button className="bg-black h-8 w-8"><FontAwesomeIcon icon={faCartPlus}/></Button>
+                                </div>
+                            </div>
+                        </Card>
+
+                        <Card className="float w-[250px] p-0 group rounded-xl">
+                            <div className="w-full h-[250px] overflow-hidden rounded-xl relative">
+                                <img src="/model1.jpg"
+                                     className="w-full group-hover:scale-125 transition-all duration-300"/>
+                                <div className="flex absolute left-0 bottom-0 p-3">
+                                    <Button className="rounded-xl px-2 py-1 bg-red-500">
+                                        <FontAwesomeIcon icon={faHeart}/>
+                                    </Button>
+                                    <Button className="rounded-xl ml-2 bg-white text-black px-2.5 py-1 text-sm">
+                                        <FontAwesomeIcon className="mr-1" icon={faCommentAlt}/>
+                                        32
+                                    </Button>
+                                    <Button className="rounded-xl ml-2 px-2.5 py-1 bg-black">
+                                        <FontAwesomeIcon icon={faShareAlt}/>
+                                    </Button>
+                                </div>
+                            </div>
+                            <div className="p-3">
+                                <h3 className="font-semibold text-lg">Finibus Bonorum et Malorum</h3>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                </div>
+                            </div>
+                        </Card>
+
+                        <div className={`float max-w-xs`}>
                             <Tabs
-                                className="backdrop-blur-sm bg-white/30 mb-1 "
+                                className="max-w-xs backdrop-blur-sm bg-white/30 mb-1 "
                                 useCurrentTabIndex={[tabIndex, setTabIndex]}
                                 tabs={['Lorem', 'Ipsum', 'Dolor']}
                             >
@@ -92,8 +161,33 @@ export default function () {
                             </Tabs>
                         </div>
 
-                        <div className={`float-7 mt-6`}>
-                            <Card className="max-w-lg p-3.5 mb-6">
+
+                        <Card
+                            className="float group relative w-[280px] p-0 overflow-hidden rounded-tl-lg rounded-tr-2xl rounded-bl-2xl hover:rounded-bl-[40px] hover:rounded-tr-[40px]">
+                            <div className="w-full overflow-hidden z-0 relative">
+                                <img src="/model3.jpg" alt=""/>
+                                <div
+                                    className="flex absolute left-0 bottom-0 p-3  group-hover:-translate-y-20 transition-all duration-300">
+                                    <Button className="rounded-xl px-2 py-1 bg-red-500">
+                                        <FontAwesomeIcon icon={faHeart}/>
+                                    </Button>
+                                    <Button className="rounded-xl ml-2 bg-white text-black px-2.5 py-1 text-sm">
+                                        <FontAwesomeIcon className="mr-1" icon={faCommentAlt}/>
+                                        56
+                                    </Button>
+                                </div>
+                            </div>
+
+                            <div
+                                className="absolute z-10 left-8 bottom-2 translate-y-10 bg-white rounded-lg p-3 transition-all duration-300 group-hover:translate-y-0 opacity-0 group-hover:opacity-100">
+                                <h3 className="font-semibold">Finibus Bonorum et Malorum</h3>
+                                <div>Lorem ipsum dolor sit amet</div>
+                            </div>
+                        </Card>
+
+
+                        <div className={`float`}>
+                            <Card className="max-w-sm p-3.5 mb-6">
                                 <h3 className={`font-semibold text-center`}>Sample checkout</h3>
                                 <div className="w-full flex my-3 justify-center">
                                     <img src="/visa.png" className="h-12"/>
@@ -108,17 +202,17 @@ export default function () {
                                 </div>
 
                                 <div className="w-full flex space-x-2">
-                                    <div className="w-full md:w-2/3">
+                                    <div className="w-full md:w-1/2">
                                         <label htmlFor="card">Card number</label>
                                         <Input id="card" className="w-full border border-gray-400 shadow-none"
                                                placeholder="xxxx xxxx xxxx xxxx" maxLength="16"/>
                                     </div>
-                                    <div className="w-full md:w-1/6">
+                                    <div className="w-full md:w-1/4">
                                         <label htmlFor="expiry">Expiry</label>
                                         <Input id="expiry" className="w-full border border-gray-400 shadow-none"
                                                placeholder="MM/YY"/>
                                     </div>
-                                    <div className="w-full md:w-1/6">
+                                    <div className="w-full md:w-1/4">
                                         <label htmlFor="cvv">CVV</label>
                                         <Input id="cvv" className="w-full border border-gray-400 shadow-none"
                                                type="password"
@@ -129,8 +223,8 @@ export default function () {
                             </Card>
                         </div>
 
-                    </div>
 
+                    </div>
                 </div>
 
                 <div className="ocean hidden md:block">

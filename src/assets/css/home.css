@@ -4,15 +4,15 @@
     }
 
     30% {
-        transform: translateY(-10px)
+        transform: translateY(-3px)
     }
 
     50% {
-        transform: translateY(4px)
+        transform: translateY(2px)
     }
 
     70% {
-        transform: translateY(-15px)
+        transform: translateY(-5px)
     }
 
     to {
@@ -20,15 +20,31 @@
     }
 }
 
-.float-10 {
+.float {
     transition: all .25s ease;
     animation: float 10s ease infinite reverse
 }
 
-.float-7 {
-    transition: all .25s ease;
-    animation: float 11s ease infinite reverse
+.float:nth-of-type(2) {
+    animation-delay: 3s;
 }
+
+.float:nth-of-type(3) {
+    animation-delay: 500ms;
+}
+
+.float:nth-of-type(4) {
+    animation-delay: 2s;
+}
+
+.float:nth-of-type(5) {
+    animation-delay: 1s;
+}
+
+.float:nth-of-type(6) {
+    animation-delay: 700ms;
+}
+
 
 .ocean {
     height: 5%;
@@ -46,36 +62,32 @@
     bottom: 0;
     width: 6400px;
     height: 198px;
-    animation: wave 35s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite, swell 7s ease -1.25s infinite;
-    transform: translate3d(0, 0, 0);
+    animation: wave 35s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite, swelldown 7s ease -1.25s infinite;
+    animation-delay: 1s;
 }
 
 .wave:nth-of-type(2) {
     background: url(/wave3.svg) repeat-x;
-    transform: translateX(350px);
-    animation: wave 27s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.125s infinite;
-    animation-delay: 6s;
+    animation: wave 25s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.125s infinite, swelldown 7s ease -1.25s infinite;
+    animation-delay: 3s;
 }
 
 .wave:nth-of-type(3) {
     background: url(/wave4.svg) repeat-x;
-    animation: wave 38s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.125s infinite;
-    transform: translateX(250px);
-    animation-delay: 3s;
+    animation: wave 38s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.125s infinite, swelldown 7s ease -1.25s infinite;
+    animation-delay: 2s;
 }
 
 .wave:nth-of-type(4) {
     background: url(/wave5.svg) repeat-x;
-    animation: wave 35s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.125s infinite;
-    transform: translateX(-150px);
-    /*animation-delay: 2s;*/
+    animation: wave 20s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.125s infinite, swelldown 7s ease -1.25s infinite;
+    animation-delay: 0s;
 }
 
 .wave:nth-of-type(5) {
     background: url(/wave6.svg) repeat-x;
-    animation: wave 30s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
-    transform: translateX(650px);
-    animation-delay: 8s;
+    animation: wave 15s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.125s infinite, swelldown 7s ease -1.25s infinite;
+    animation-delay: 5s;
 }
 
 @keyframes wave {
@@ -93,5 +105,14 @@
     }
     50% {
         transform: translate3d(0, 5px, 0);
+    }
+}
+
+@keyframes swelldown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(25px);
     }
 }
