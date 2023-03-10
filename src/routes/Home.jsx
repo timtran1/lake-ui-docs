@@ -31,8 +31,8 @@ export default function () {
 
             <main className={`w-full flex-grow bg-gray-50 relative overflow-hidden`}>
 
-                <div className={`flex flex-wrap m-auto max-w-7xl pt-20 text-center md:text-left justify-ar`}>
-                    <div className={`md:w-1/3 sm:w-full px-3`}>
+                <div className={`flex flex-wrap m-auto max-w-7xl text-center md:text-left justify-ar`}>
+                    <div className={`md:w-1/3 sm:w-full px-3 pt-20`}>
                         <h1 className={`text-5xl font-bold mb-3`}>Lake UI</h1>
                         <h2 className={` text-2xl`}>
                             Modern React UI components <br/>
@@ -68,7 +68,7 @@ export default function () {
                     </div>
 
                     <div
-                        className={`flex flex-wrap items-center justify-around md:w-2/3 bg-gradient-to-r from-green-400 to-cyan-500 rounded-md shadow p-4 pt-6 z-30`}>
+                        className={`mt-4 flex flex-wrap items-center justify-around md:w-2/3 bg-gradient-to-r from-green-400 to-cyan-500 rounded-md shadow p-4 pt-6 z-30`}>
 
                         <Card className="float mt-2 w-[200px] p-0 group">
                             <div className="overflow-hidden w-full rounded-t">
