@@ -22,14 +22,14 @@ export default function () {
     }
 
     return (
-        <div>
-            <TopBar setSidebarOpen={setSidebarOpen}/>
+        <div className={`md:h-screen w-screen flex flex-col`}>
+            <TopBar setSidebarOpen={setSidebarOpen} className={``}/>
             <Sidebar useOpen={[sidebarOpen, setSidebarOpen]}/>
             <Toast className={`text-white bg-green-500 p-1 pl-2`} useOpen={[copyToastOpen, setCopyToastOpen]}>
                 Copied!
             </Toast>
 
-            <main className={`w-screen md:h-screen bg-gray-50 relative overflow-hidden`}>
+            <main className={`w-full flex-grow bg-gray-50 relative overflow-hidden`}>
 
                 <div className={`flex flex-wrap m-auto max-w-7xl pt-20 text-center md:text-left justify-ar`}>
                     <div className={`md:w-1/3 sm:w-full px-3`}>
@@ -78,7 +78,7 @@ export default function () {
 
                             <div className="p-3">
                                 <div className="flex flex-wrap justify-between items-center mb-1">
-                                    <div className="text-xl">AIR<span className="font-semibold">DUNKERS</span></div>
+                                    <div className="text-xl">AIR<span className="font-semibold">THUNDER</span></div>
                                     <Card className="bg-black border-0 text-white">$<span
                                         className="font-black">299.99</span></Card>
                                 </div>
