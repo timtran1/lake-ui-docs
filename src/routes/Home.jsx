@@ -70,6 +70,30 @@ export default function () {
                     <div
                         className={`mt-4 flex flex-wrap items-center justify-around md:w-2/3 bg-gradient-to-r from-green-400 to-cyan-500 rounded-md shadow p-4 pt-6 z-30`}>
 
+                        <Card className="float mt-2 w-[250px] p-0 group rounded-xl">
+                            <div className="w-full h-[250px] overflow-hidden rounded-xl relative">
+                                <img src="/model1.jpg"
+                                     className="w-full group-hover:scale-125 transition-all duration-300"/>
+                                <div className="flex absolute left-0 bottom-0 p-3">
+                                    <Button className="rounded-xl px-2 py-1 bg-red-500">
+                                        <FontAwesomeIcon icon={faHeart}/>
+                                    </Button>
+                                    <Button className="rounded-xl ml-2 bg-white text-black px-2.5 py-1 text-sm">
+                                        <FontAwesomeIcon className="mr-1" icon={faCommentAlt}/>
+                                        32
+                                    </Button>
+                                    <Button className="rounded-xl ml-2 px-2.5 py-1 bg-black">
+                                        <FontAwesomeIcon icon={faShareAlt}/>
+                                    </Button>
+                                </div>
+                            </div>
+                            <div className="p-3">
+                                <h3 className="font-semibold text-lg">Finibus Bonorum et Malorum</h3>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                </div>
+                            </div>
+                        </Card>
+
                         <Card className="float mt-2 w-[200px] p-0 group">
                             <div className="overflow-hidden w-full rounded-t">
                                 <img src="/shoes.jpg" alt=""
@@ -82,7 +106,7 @@ export default function () {
                                     <Card className="bg-black border-0 text-white">$<span
                                         className="font-black">299.99</span></Card>
                                 </div>
-                                <div className="text-sm text-gray-600">X-ATHELETE COLLECTION</div>
+                                {/*<div className="text-sm text-gray-600">X-ATHELETE COLLECTION</div>*/}
                                 <div className="flex text-xs py-1 text-amber-400">
                                     <FontAwesomeIcon icon={faStar}/>
                                     <FontAwesomeIcon icon={faStar}/>
@@ -109,30 +133,6 @@ export default function () {
                                             className="rounded-full h-6 w-6 p-0 bg-yellow-400"></Button></div>
                                     </div>
                                     <Button className="bg-black h-8 w-8"><FontAwesomeIcon icon={faCartPlus}/></Button>
-                                </div>
-                            </div>
-                        </Card>
-
-                        <Card className="float mt-2 w-[250px] p-0 group rounded-xl">
-                            <div className="w-full h-[250px] overflow-hidden rounded-xl relative">
-                                <img src="/model1.jpg"
-                                     className="w-full group-hover:scale-125 transition-all duration-300"/>
-                                <div className="flex absolute left-0 bottom-0 p-3">
-                                    <Button className="rounded-xl px-2 py-1 bg-red-500">
-                                        <FontAwesomeIcon icon={faHeart}/>
-                                    </Button>
-                                    <Button className="rounded-xl ml-2 bg-white text-black px-2.5 py-1 text-sm">
-                                        <FontAwesomeIcon className="mr-1" icon={faCommentAlt}/>
-                                        32
-                                    </Button>
-                                    <Button className="rounded-xl ml-2 px-2.5 py-1 bg-black">
-                                        <FontAwesomeIcon icon={faShareAlt}/>
-                                    </Button>
-                                </div>
-                            </div>
-                            <div className="p-3">
-                                <h3 className="font-semibold text-lg">Finibus Bonorum et Malorum</h3>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit
                                 </div>
                             </div>
                         </Card>
@@ -190,9 +190,9 @@ export default function () {
                             <Card className="max-w-sm p-3.5 mb-6">
                                 <h3 className={`font-semibold text-center`}>Sample checkout</h3>
                                 <div className="w-full flex my-3 justify-center">
-                                    <img src="/visa.png" className="h-12"/>
-                                    <img src="/Mastercard-logo.svg" className="h-12 ml-4"/>
-                                    <img src="/American_Express_logo.svg" className="h-12 ml-4"/>
+                                    <img src="/visa.png" className="h-8"/>
+                                    <img src="/Mastercard-logo.svg" className="h-8 ml-4"/>
+                                    <img src="/American_Express_logo.svg" className="h-8 ml-4"/>
                                 </div>
 
                                 <div className="w-full mb-2">
