@@ -68,7 +68,7 @@ export default function () {
                     </div>
 
                     <div
-                        className={`mt-4 flex flex-wrap items-center justify-around md:w-2/3 bg-gradient-to-r from-green-400 to-cyan-500 rounded-md shadow p-4 pt-6 z-30`}>
+                        className={`scale-90 -translate-y-5 flex flex-wrap items-center justify-around md:w-2/3 bg-gradient-to-r from-green-400 to-cyan-500 rounded-md shadow p-4 pt-6 z-30`}>
 
                         <Card className="float mt-2 w-[250px] p-0 group rounded-xl">
                             <div className="w-full h-[250px] overflow-hidden rounded-xl relative">
@@ -106,7 +106,7 @@ export default function () {
                                     <Card className="bg-black border-0 text-white">$<span
                                         className="font-black">299.99</span></Card>
                                 </div>
-                                {/*<div className="text-sm text-gray-600">X-ATHELETE COLLECTION</div>*/}
+                                <div className="text-sm text-gray-600">X-ATHELETE COLLECTION</div>
                                 <div className="flex text-xs py-1 text-amber-400">
                                     <FontAwesomeIcon icon={faStar}/>
                                     <FontAwesomeIcon icon={faStar}/>
