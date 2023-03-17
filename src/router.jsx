@@ -5,6 +5,7 @@ import InputPage from "./routes/InputPage.jsx";
 import TabsPage from "./routes/TabsPage.jsx";
 import CardPage from "./routes/CardPage.jsx";
 import ToastPage from "./routes/ToastPage.jsx";
+import CarouselPage from "./routes/CarouselPage.jsx";
 
 export default createBrowserRouter([
     {
@@ -31,5 +32,9 @@ export default createBrowserRouter([
     {
         path: "/toast",
         element: <ToastPage/>,
+    },
+    {
+        path: "/carousel",
+        element: <CarouselPage/>,
     }
 ])
