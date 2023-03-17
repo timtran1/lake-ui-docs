@@ -13,6 +13,7 @@ export default function (props) {
                 <Link to={`/tabs`}>Tabs</Link>
                 <Link to={`/toast`}>Toast</Link>
                 <Link to={`/carousel`}>Carousel</Link>
+                <Link to={`/dialog`}>Dialog</Link>
             </div>
 
             <h2 className={`text-xl font-bold mt-5 mb-1`}>WIP</h2>
