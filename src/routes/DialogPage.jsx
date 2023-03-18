@@ -14,6 +14,7 @@ export default function () {
     const [sidebarOpen, setSidebarOpen] = useState(false)
     const [dialogOpen, setDialogOpen] = useState(false)
     const [dialogOpen2, setDialogOpen2] = useState(false)
+    const [dialogOpen3, setDialogOpen3] = useState(false)
 
     return (
         <div>
@@ -211,14 +212,14 @@ function MyComponent() {
                     <Button className="bg-black" onClick={() => setDialogOpen(true)}>
                         Open a dialog
                     </Button>
-                    <Dialog disableCloseBtn useOpen={[dialogOpen, setDialogOpen]} className="max-w-sm">
+                    <Dialog disableCloseBtn useOpen={[dialogOpen3, setDialogOpen3]} className="max-w-sm">
                         <h3 className="font-bold text-lg">You opened a Dialog!</h3>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
                             laboris nisi ut aliquip ex ea commodo consequat.
                         </p>
-                        <Button className="bg-black mt-2" onClick={() => setDialogOpen(false)}>Close</Button>
+                        <Button className="bg-black mt-2" onClick={() => setDialogOpen3(false)}>Close</Button>
                     </Dialog>
                 </ExampleCodeSection>
 
