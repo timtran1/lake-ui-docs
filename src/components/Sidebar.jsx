@@ -20,8 +20,6 @@ export default function (props) {
 
             <div className={`flex flex-col`}>
                 <Link to={`/`}>Dropdown</Link>
-                <Link to={`/`}>Toast</Link>
-                <Link to={`/`}>Dialog</Link>
                 <Link to={`/`}>SideDrawer</Link>
                 <Link to={`/`}>Topbar</Link>
                 <Link to={`/`}>Checkbox</Link>
