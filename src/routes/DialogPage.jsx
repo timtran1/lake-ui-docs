@@ -209,7 +209,7 @@ function MyComponent() {
         </Dialog>
     )
 }`}>
-                    <Button className="bg-black" onClick={() => setDialogOpen(true)}>
+                    <Button className="bg-black" onClick={() => setDialogOpen3(true)}>
                         Open a dialog
                     </Button>
                     <Dialog disableCloseBtn useOpen={[dialogOpen3, setDialogOpen3]} className="max-w-sm">
