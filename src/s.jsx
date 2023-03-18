@@ -1,83 +1,35 @@
-<div className="py-6">
-    <h4 className="text-white font-bold text-xl my-2">Tabs with custom background color</h4>
-    <Tabs
-        style={{backgroundColor: '#60a5fa'}}
-        useCurrentTabIndex={[tabIndex, setTabIndex]}
-        tabs={['Tab 0', 'Tab 1', 'Tab 2']}
-    >
-        <TabPanel index={0} currentTabIndex={tabIndex}>
-            Tab 0 content here
-        </TabPanel>
-        <TabPanel index={1} currentTabIndex={tabIndex}>
-            Tab 1 content here
-        </TabPanel>
-        <TabPanel index={2} currentTabIndex={tabIndex}>
-            Tab 2 content here
-        </TabPanel>
-    </Tabs>
+import {Button, Dialog} from "@asynctech/lake-ui";
+import {useState} from "react";
 
-    <h4 className="text-white font-bold text-xl mb-2 mt-8">Glassy tabs</h4>
-    <Tabs
-        style={{
-            backgroundColor: 'rgba(255, 255, 255, 0.3)',
-            backdropFilter: 'blur(4px)',
-            marginBottom: '0.25rem',
-        }}
-        useCurrentTabIndex={[tabIndex, setTabIndex]}
-        tabs={['Tab 0', 'Tab 1', 'Tab 2']}
-    >
-        <TabPanel style={{
-            backgroundColor: 'white',
-            padding: '1.25rem',
-            borderRadius: '0.375rem',
-        }} index={0} currentTabIndex={tabIndex}>
-            Tab 0 content here
-        </TabPanel>
-        <TabPanel style={{
-            backgroundColor: 'white',
-            padding: '1.25rem',
-            borderRadius: '0.375rem',
-        }} index={1} currentTabIndex={tabIndex}>
-            Tab 1 content here
-        </TabPanel>
-        <TabPanel style={{
-            backgroundColor: 'white',
-            padding: '1.25rem',
-            borderRadius: '0.375rem',
-        }} index={2} currentTabIndex={tabIndex}>
-            Tab 2 content here
-        </TabPanel>
-    </Tabs>
+function MyComponent() {
+    const [dialogOpen, setDialogOpen] = useState(false)
 
-    <h4 className="text-white font-bold text-xl mb-2 mt-12">Tabs with custom TabPanel style</h4>
-    <Tabs
-        style={{marginBottom: '0.25rem'}}
-        useCurrentTabIndex={[tabIndex, setTabIndex]}
-        tabs={['Tab 0', 'Tab 1', 'Tab 2']}
-    >
-        <TabPanel style={{
-            color: 'white',
-            backgroundColor: '#4f46e5',
-            padding: '1.25rem',
-            borderRadius: '0.375rem',
-        }} index={0} currentTabIndex={tabIndex}>
-            Tab 0 content here
-        </TabPanel>
-        <TabPanel style={{
-            color: 'white',
-            backgroundColor: '#4f46e5',
-            padding: '1.25rem',
-            borderRadius: '0.375rem',
-        }} index={1} currentTabIndex={tabIndex}>
-            Tab 1 content here
-        </TabPanel>
-        <TabPanel style={{
-            color: 'white',
-            backgroundColor: '#4f46e5',
-            padding: '1.25rem',
-            borderRadius: '0.375rem',
-        }} index={2} currentTabIndex={tabIndex}>
-            Tab 2 content here
-        </TabPanel>
-    </Tabs>
-</div>
+    return (
+        <div>
+            <Button style={{backgroundColor: 'black'}} onClick={() => setDialogOpen(true)}>
+                Open a dialog
+            </Button>
+            <Dialog useOpen={[dialogOpen, setDialogOpen]} style={{
+                maxWidth: '24rem',
+                backgroundImage: 'linear-gradient(to right, #f97316, #fcd34d)',
+                color: 'white',
+                borderRadius: '0',
+            }}>
+                <h3 style={{
+                    fontSize: '1.25rem',
+                    fontWeight: '700',
+                }}>You opened a Dialog!</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <Button style={{
+                    backgroundColor: 'white',
+                    color: 'black',
+                    marginTop: '0.5rem',
+                }} onClick={() => setDialogOpen(false)}>Close</Button>
+            </Dialog>
+        </div>
+    )
+}
