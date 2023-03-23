@@ -1,35 +1,50 @@
-import {Button, Dialog} from "@asynctech/lake-ui";
-import {useState} from "react";
+import {Button, Dropdown, DropdownItem} from "@asynctech/lake-ui";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faAngleDown} from "@fortawesome/free-solid-svg-icons";
 
 function MyComponent() {
-    const [dialogOpen, setDialogOpen] = useState(false)
-
     return (
         <div>
-            <Button style={{backgroundColor: 'black'}} onClick={() => setDialogOpen(true)}>
-                Open a dialog
-            </Button>
-            <Dialog useOpen={[dialogOpen, setDialogOpen]} style={{
-                maxWidth: '24rem',
-                backgroundImage: 'linear-gradient(to right, #f97316, #fcd34d)',
-                color: 'white',
-                borderRadius: '0',
-            }}>
-                <h3 style={{
-                    fontSize: '1.25rem',
-                    fontWeight: '700',
-                }}>You opened a Dialog!</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-                <Button style={{
-                    backgroundColor: 'white',
-                    color: 'black',
-                    marginTop: '0.5rem',
-                }} onClick={() => setDialogOpen(false)}>Close</Button>
-            </Dialog>
+            <Dropdown renderToggle={
+                <Button className={`bg-black text-white`} hoverEffect={false}>
+                    Show dropdown
+                    <FontAwesomeIcon className="ml-2 text-xs" icon={faAngleDown}/>
+                </Button>
+            }>
+                <DropdownItem>foo</DropdownItem>
+                <DropdownItem>bar</DropdownItem>
+            </Dropdown>
+
+
+            <Dropdown left renderToggle={
+                <Button className={`bg-black text-white`} hoverEffect={false}>
+                    Show dropdown on the left
+                    <FontAwesomeIcon className="ml-2 text-xs" icon={faAngleDown}/>
+                </Button>
+            }>
+                <DropdownItem>foo</DropdownItem>
+                <DropdownItem>bar</DropdownItem>
+            </Dropdown>
+
+            <Dropdown top renderToggle={
+                <Button className={`bg-black text-white`} hoverEffect={false}>
+                    Show dropdown up top
+                    <FontAwesomeIcon className="ml-2 text-xs" icon={faAngleDown}/>
+                </Button>
+            }>
+                <DropdownItem>foo</DropdownItem>
+                <DropdownItem>bar</DropdownItem>
+            </Dropdown>
+
+            <Dropdown top left renderToggle={
+                <Button className={`bg-black text-white`} hoverEffect={false}>
+                    Show dropdown up top left
+                    <FontAwesomeIcon className="ml-2 text-xs" icon={faAngleDown}/>
+                </Button>
+            }>
+                <DropdownItem>foo</DropdownItem>
+                <DropdownItem>bar</DropdownItem>
+            </Dropdown>
         </div>
     )
 }

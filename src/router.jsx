@@ -7,6 +7,7 @@ import CardPage from "./routes/CardPage.jsx";
 import ToastPage from "./routes/ToastPage.jsx";
 import CarouselPage from "./routes/CarouselPage.jsx";
 import DialogPage from "./routes/DialogPage.jsx";
+import DropdownPage from "./routes/DropdownPage.jsx";
 
 export default createBrowserRouter([
     {
@@ -41,5 +42,9 @@ export default createBrowserRouter([
     {
         path: "/dialog",
         element: <DialogPage/>,
+    },
+    {
+        path: "/dropdown",
+        element: <DropdownPage/>,
     }
 ])

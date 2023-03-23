@@ -14,12 +14,12 @@ export default function (props) {
                 <Link to={`/toast`}>Toast</Link>
                 <Link to={`/carousel`}>Carousel</Link>
                 <Link to={`/dialog`}>Dialog</Link>
+                <Link to={`/dropdown`}>Dropdown</Link>
             </div>
 
             <h2 className={`text-xl font-bold mt-5 mb-1`}>WIP</h2>
 
             <div className={`flex flex-col`}>
-                <Link to={`/`}>Dropdown</Link>
                 <Link to={`/`}>SideDrawer</Link>
                 <Link to={`/`}>Topbar</Link>
                 <Link to={`/`}>Checkbox</Link>
