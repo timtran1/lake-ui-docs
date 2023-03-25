@@ -1,9 +1,9 @@
 import {Link} from "react-router-dom";
-import {Sidebar} from "@asynctech/lake-ui"
+import {SideDrawer} from "@asynctech/lake-ui"
 
 export default function (props) {
     return (
-        <Sidebar useOpen={props.useOpen} className={`py-3 px-4 text-lg`}>
+        <SideDrawer useOpen={props.useOpen} className={`py-3 px-4 text-lg`}>
             <h2 className={`text-xl font-bold mb-1`}>Components</h2>
 
             <div className={`flex flex-col`}>
@@ -15,13 +15,12 @@ export default function (props) {
                 <Link to={`/carousel`}>Carousel</Link>
                 <Link to={`/dialog`}>Dialog</Link>
                 <Link to={`/dropdown`}>Dropdown</Link>
+                <Link to={`/navbars`}>NavBars</Link>
             </div>
 
             <h2 className={`text-xl font-bold mt-5 mb-1`}>WIP</h2>
 
             <div className={`flex flex-col`}>
-                <Link to={`/`}>SideDrawer</Link>
-                <Link to={`/`}>Topbar</Link>
                 <Link to={`/`}>Checkbox</Link>
                 <Link to={`/`}>Radio</Link>
                 <Link to={`/`}>Select</Link>
@@ -34,6 +33,6 @@ export default function (props) {
                 <Link to={`/`}>Gradient Text</Link>
                 <Link to={`/`}>Dark Mode</Link>
             </div>
-        </Sidebar>
+        </SideDrawer>
     )
 }

@@ -8,7 +8,7 @@ export default function (props) {
     return (
         <Tabs useCurrentTabIndex={[tab, setTab]} tabs={['Example', 'Code']}>
             <TabPanel index={0} currentTabIndex={tab}>
-                <div className="rounded-md flex justify-center items-center flex-wrap bg-gradient-to-r from-green-400 to-cyan-500 min-h-[200px]">
+                <div className="rounded-md flex justify-center py-8 items-center flex-wrap bg-gradient-to-r from-green-400 to-cyan-500 min-h-[200px]">
                     {props.children}
                 </div>
             </TabPanel>
