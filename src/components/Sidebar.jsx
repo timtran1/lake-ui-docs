@@ -15,7 +15,7 @@ export default function (props) {
                 <Link to={`/carousel`}>Carousel</Link>
                 <Link to={`/dialog`}>Dialog</Link>
                 <Link to={`/dropdown`}>Dropdown</Link>
-                <Link to={`/navbars`}>NavBars</Link>
+                <Link to={`/navbars`}>Navigation Bars</Link>
             </div>
 
             <h2 className={`text-xl font-bold mt-5 mb-1`}>WIP</h2>
