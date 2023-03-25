@@ -17,6 +17,8 @@ import {Link} from "react-router-dom";
 export default function () {
     const [sidebarOpen, setSidebarOpen] = useState(false)
     const [sidebarOpen2, setSidebarOpen2] = useState(false)
+    const [sidebarOpen3, setSidebarOpen3] = useState(false)
+    const [sidebarOpen4, setSidebarOpen4] = useState(false)
 
     return (
         <div>
@@ -24,10 +26,11 @@ export default function () {
             <Sidebar useOpen={[sidebarOpen, setSidebarOpen]}/>
 
             <main className="mx-auto max-w-[800px] pt-10 pb-20 px-6">
-                <h2 className="text-3xl font-bold mb-3">NavBars</h2>
+                <h2 className="text-3xl font-bold mb-3">Navigation Bars</h2>
 
                 {/*topbar: top, custom styles eg height, bg*/}
                 {/*sidebar: left, right, custom styles eg width, bg*/}
+                {/*topbar + sidebar*/}
 
                 <h3 className="text-lg font-semibold">TopBar</h3>
                 <p className="mb-4">
@@ -36,7 +39,6 @@ export default function () {
 
 
                 <ExampleCodeSection>
-
                     <h4 className="text-white text-center w-full font-bold text-xl my-8">Simple TopBar</h4>
                     <div className={`w-[500px] bg-white`}>
                         <TopBar className="flex justify-between items-center">
@@ -82,8 +84,9 @@ export default function () {
                     </div>
 
                     <h4 className="text-white font-bold text-xl my-8">TopBar with custom styling</h4>
-                    <div className={`w-[500px] bg-white`}>
-                        <TopBar className="rounded-b-3xl flex justify-between items-center bg-gradient-to-r from-amber-500 to-orange-300 text-white h-[90px] px-6">
+                    <div className={`w-[500px] bg-white mb-10`}>
+                        <TopBar
+                            className="rounded-b-3xl flex justify-between items-center bg-gradient-to-r from-indigo-500 to-cyan-700 text-white h-[90px] px-6">
                             <div className="flex">
                                 <img src="/logo.png" className="h-8 rounded shadow"/>
                                 <h1 className={`font-bold text-2xl ml-2`}>Lake UI</h1>
@@ -136,7 +139,20 @@ export default function () {
                     <SideDrawer useOpen={[sidebarOpen2, setSidebarOpen2]}>
                         <p className="font-semibold">You opened a SideDrawer!</p>
                     </SideDrawer>
-                    <Button onClick={() => setSidebarOpen2(true)}>Open SideDrawer</Button>
+
+                    <SideDrawer useOpen={[sidebarOpen3, setSidebarOpen3]} right>
+                        <p className="font-semibold">You opened a SideDrawer on the right!</p>
+                    </SideDrawer>
+
+                    <SideDrawer useOpen={[sidebarOpen4, setSidebarOpen4]}>
+                        <p className="font-semibold">You opened a SideDrawer on the right!</p>
+                    </SideDrawer>
+
+                    <div className="flex flex-col items-center gap-10 py-10">
+                        <Button onClick={() => setSidebarOpen2(true)}>Open SideDrawer</Button>
+                        <Button onClick={() => setSidebarOpen3(true)}>Open SideDrawer on the right</Button>
+                        <Button onClick={() => setSidebarOpen4(true)}>Open SideDrawer with custom styling</Button>
+                    </div>
                 </ExampleCodeSection>
             </main>
         </div>
