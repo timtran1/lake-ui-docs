@@ -8,8 +8,8 @@ export default function (props) {
     return (
         <TopBar className={`w-screen flex justify-between`}>
             <div className={`flex`}>
-                <Button hoverEffect={false} className={`p-2 pr-4 bg-transparent text-black`}>
-                    <FontAwesomeIcon icon={faBars} onClick={() => props.setSidebarOpen(true)}/>
+                <Button hoverEffect={false} className={`p-2 pr-4 bg-transparent text-black`} onClick={() => props.setSidebarOpen(true)}>
+                    <FontAwesomeIcon icon={faBars}/>
                 </Button>
                 <Link to={`/`} className={`flex items-center`}>
                     <img src="/logo.png" className={`h-8 rounded shadow`}/>
