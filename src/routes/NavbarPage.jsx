@@ -6,13 +6,23 @@ import ExampleCodeSection from "../components/ExampleCodeSection.jsx";
 import {
     Button,
     TopBar,
-    SideDrawer
+    // SideDrawer
 } from "@asynctech/lake-ui"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faBars} from "@fortawesome/free-solid-svg-icons";
+import {
+    faBars,
+    faVideo,
+    faClock,
+    faGears,
+    faUser,
+    faBook,
+    faFolderTree,
+    faEarth,
+    faCalendar
+} from "@fortawesome/free-solid-svg-icons";
 import {Link} from "react-router-dom";
 // import TopBar from '../components/base/TopBar.jsx'
-// import SideDrawer from '../components/base/Sidebar.jsx'
+import SideDrawer from '../components/base/Sidebar.jsx'
 
 export default function () {
     const [sidebarOpen, setSidebarOpen] = useState(false)
@@ -144,8 +154,32 @@ export default function () {
                         <p className="font-semibold">You opened a SideDrawer on the right!</p>
                     </SideDrawer>
 
-                    <SideDrawer useOpen={[sidebarOpen4, setSidebarOpen4]}>
-                        <p className="font-semibold">You opened a SideDrawer on the right!</p>
+                    <SideDrawer useOpen={[sidebarOpen4, setSidebarOpen4]}
+                                className="bg-gradient-to-b from-amber-500 to-orange-300 text-white flex flex-col gap-6 items-center w-[60px]">
+                        <Button className="bg-transparent">
+                            <FontAwesomeIcon icon={faBook}/>
+                        </Button>
+                        <Button className="bg-transparent">
+                            <FontAwesomeIcon icon={faFolderTree}/>
+                        </Button>
+                        <Button className="bg-transparent">
+                            <FontAwesomeIcon icon={faEarth}/>
+                        </Button>
+                        <Button className="bg-transparent">
+                            <FontAwesomeIcon icon={faCalendar}/>
+                        </Button>
+                        <Button className="bg-transparent">
+                            <FontAwesomeIcon icon={faClock}/>
+                        </Button>
+                        <Button className="bg-transparent">
+                            <FontAwesomeIcon icon={faVideo}/>
+                        </Button>
+                        <Button className="bg-transparent">
+                            <FontAwesomeIcon icon={faUser}/>
+                        </Button>
+                        <Button className="bg-transparent">
+                            <FontAwesomeIcon icon={faGears}/>
+                        </Button>
                     </SideDrawer>
 
                     <div className="flex flex-col items-center gap-10 py-10">
@@ -153,6 +187,14 @@ export default function () {
                         <Button onClick={() => setSidebarOpen3(true)}>Open SideDrawer on the right</Button>
                         <Button onClick={() => setSidebarOpen4(true)}>Open SideDrawer with custom styling</Button>
                     </div>
+                </ExampleCodeSection>
+
+                <h3 className="text-lg font-semibold mt-10">TopBar + SideDrawer</h3>
+                <p className="mb-4">
+                    To use the TopBar and SideDrawer together, import the TopBar and SideDrawer components and add them to your JSX code.
+                </p>
+                <ExampleCodeSection>
+
                 </ExampleCodeSection>
             </main>
         </div>
