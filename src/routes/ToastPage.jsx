@@ -171,7 +171,7 @@ export default function () {
                         <td><code>array</code></td>
                         <td><code></code></td>
                         <td>yes</td>
-                        <td>React <Code>useState</Code> hook array for the current tab index, an integer.</td>
+                        <td>React <Code>useState</Code> hook array for the open state of the Toast.</td>
                     </tr>
                     <tr>
                         <td><code>timeOut</code></td>
