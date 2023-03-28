@@ -1,12 +1,11 @@
 import DocTopBar from "../components/Topbar.jsx";
 import Sidebar from "../components/Sidebar.jsx";
 import {useState} from "react";
-// import SimpleCodeSection from "../components/SimpleCodeSection.jsx";
 import ExampleCodeSection from "../components/ExampleCodeSection.jsx";
 import {
     Button,
     TopBar,
-    // SideDrawer
+    SideDrawer
 } from "@asynctech/lake-ui"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {
@@ -20,9 +19,8 @@ import {
     faEarth,
     faCalendar
 } from "@fortawesome/free-solid-svg-icons";
-import {Link} from "react-router-dom";
 // import TopBar from '../components/base/TopBar.jsx'
-import SideDrawer from '../components/base/Sidebar.jsx'
+// import SideDrawer from '../components/base/Sidebar.jsx'
 
 export default function () {
     const [sidebarOpen, setSidebarOpen] = useState(false)
