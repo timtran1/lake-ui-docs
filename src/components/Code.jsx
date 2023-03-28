@@ -1,10 +1,3 @@
-import {Prism as SyntaxHighlighter} from "react-syntax-highlighter";
-import {coldarkDark} from "react-syntax-highlighter/dist/cjs/styles/prism/index.js";
-
 export default function (props) {
-    return (
-        <SyntaxHighlighter language="jsx" style={coldarkDark} className={`rounded-md`}>
-            {props.code}
-        </SyntaxHighlighter>
-    );
+    return <code className={`bg-gray-200 rounded p-1.5 ${props.className}`}>{props.children}</code>
 }

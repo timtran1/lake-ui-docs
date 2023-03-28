@@ -1,5 +1,5 @@
 import {Tabs, TabPanel} from "@asynctech/lake-ui";
-import Code from "./Code.jsx";
+import HighlightedCodeBlock from "./HighlightedCodeBlock.jsx";
 import {useState} from "react";
 
 export default function (props) {
@@ -14,7 +14,7 @@ export default function (props) {
             </TabPanel>
 
             <TabPanel index={1} currentTabIndex={tab}>
-                <Code code={props.code}/>
+                <HighlightedCodeBlock code={props.code}/>
             </TabPanel>
         </Tabs>
     )

@@ -7,6 +7,7 @@ import {
 } from "@asynctech/lake-ui";
 // import Toast from "../components/base/Toast.jsx";
 import SimpleCodeSection from "../components/SimpleCodeSection.jsx";
+import ExampleCodeSection from "../components/ExampleCodeSection.jsx";
 
 
 export default function () {
@@ -19,6 +20,9 @@ export default function () {
 
     const [toastCustomDelayOpen, setToastCustomDelayOpen] = useState(false)
     const [toastDisableAutoOpen, setToastDisableAutoOpen] = useState(false)
+
+    const [toastDisableCloseBtn, setToastDisableCloseBtn] = useState(false)
+    const [toastCustomButtonOpen, setToastCustomButtonOpen] = useState(false)
 
     return (
         <div>
@@ -34,12 +38,11 @@ export default function () {
                 </p>
 
                 {/*toast positions*/}
+                {/*custom styling*/}
                 {/*custom delay, disable autoclose*/}
                 {/*custom close button, button position*/}
-                {/*custom styling*/}
 
-                <SimpleCodeSection code={``}
-                >
+                <SimpleCodeSection code={``}>
                     <div className="flex flex-col gap-6">
                         <Button onClick={() => setToastOpen(true)}>
                             Open a Toast
@@ -69,9 +72,14 @@ export default function () {
                     </div>
                 </SimpleCodeSection>
 
-                <h3 className="text-lg font-semibold mt-10">Custom timeout and auto-close</h3>
-                <SimpleCodeSection code={``}
-                >
+
+                <h3 className="text-lg font-semibold mt-6">Custom colors and styling</h3>
+                <ExampleCodeSection>
+
+                </ExampleCodeSection>
+
+                <h3 className="text-lg font-semibold mt-6">Custom timeout and disabling auto-close</h3>
+                <SimpleCodeSection code={``}>
                     <div className="flex flex-col gap-6">
                         <Button onClick={() => setToastCustomDelayOpen(true)}>
                             Open a Toast with a 10-seconds timeout
@@ -88,6 +96,32 @@ export default function () {
                         </Toast>
                     </div>
                 </SimpleCodeSection>
+
+
+                <h3 className="text-lg font-semibold mt-6">Custom close button</h3>
+                <SimpleCodeSection code={``}>
+                    <div className="flex flex-col gap-6">
+                        <Button onClick={() => setToastDisableCloseBtn(true)}>
+                            Open a Toast with close button disabled
+                        </Button>
+                        <Button onClick={() => setToastCustomButtonOpen(true)}>
+                            Open a Toast with a custom close button
+                        </Button>
+
+                        <Toast useOpen={[toastDisableCloseBtn, setToastDisableCloseBtn]} disableCloseBtn>
+                            <p>This toast has no close button.</p>
+                        </Toast>
+                        <Toast useOpen={[toastCustomButtonOpen, setToastCustomButtonOpen]} disableCloseBtn
+                               timeOut={90000}>
+                            <span>This toast has a custom close button.</span>
+                            <Button className={`bg-black py-1 px-2 ml-1 my-1`}
+                                    onClick={() => setToastCustomButtonOpen(false)}>
+                                Close
+                            </Button>
+                        </Toast>
+                    </div>
+                </SimpleCodeSection>
+
 
             </main>
         </div>

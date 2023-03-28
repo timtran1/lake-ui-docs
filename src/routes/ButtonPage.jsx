@@ -3,6 +3,7 @@ import ExampleCodeSection from "../components/ExampleCodeSection.jsx";
 import TopBar from "../components/Topbar.jsx";
 import Sidebar from "../components/Sidebar.jsx";
 import {useState} from "react";
+import Code from "../components/Code.jsx";
 
 
 export default function () {
@@ -160,10 +161,9 @@ function MyComponent() {
                 </ExampleCodeSection>
 
                 <h3 className="text-lg font-semibold mt-8">Props</h3>
-                <p>Any prop can be passed to the componnent, including all <a
+                <p>Any prop can be passed to the component, including all <a
                     href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"
-                    className={`underline`}>attributes</a> of the regular HTML <code
-                    className={`bg-gray-200 rounded p-1`}>&lt;button&gt;</code> component.</p>
+                    className={`underline`}>attributes</a> of the regular HTML <Code>&lt;button&gt;</Code> component.</p>
                 <table className={`w-full mt-2`}>
                     <thead className={`text-left`}>
                     <tr>
