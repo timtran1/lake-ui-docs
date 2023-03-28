@@ -44,6 +44,6 @@ html, body {
 }
 
 td, th {
-    padding: 1rem;
+    padding: 0.75rem;
     border: 1px solid #ccc;
 }
