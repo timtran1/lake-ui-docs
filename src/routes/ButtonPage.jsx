@@ -4,6 +4,8 @@ import TopBar from "../components/Topbar.jsx";
 import Sidebar from "../components/Sidebar.jsx";
 import {useState} from "react";
 import Code from "../components/Code.jsx";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faArrowLeft, faHeart, faThumbsUp, faShare, faBookmark} from "@fortawesome/free-solid-svg-icons";
 
 
 export default function () {
@@ -19,7 +21,7 @@ export default function () {
             <Sidebar useOpen={[sidebarOpen, setSidebarOpen]}/>
 
             <main className="mx-auto max-w-[800px] pt-10 pb-20 px-6">
-                <h2 className="text-3xl font-bold mb-3">Buttons</h2>
+                <h2 className="text-3xl font-bold mb-3">Button</h2>
 
                 <h3 className="text-lg font-semibold">Usage</h3>
                 <p className="mb-4">
@@ -138,38 +140,39 @@ function MyComponent() {
                     The Button component can be easily customized to include any content including icons. Here's an
                     example using Font Awesome icons:
                 </p>
-                <ExampleCodeSection classCode={`<Button className="bg-black">Black</Button>
-<Button className="bg-white text-black">White</Button>
-<Button className="bg-green-500">Green</Button>
-<Button className="bg-orange-500">Orange</Button>
-<Button className="bg-red-500">Red</Button>
-<Button className="bg-blue-500">Blue (Default)</Button>
-`}
-                                    inlineCode={`<Button style={{background: 'black'}}>Black</Button>
-<Button style={{background: 'white', color: 'black'}}>White</Button>
-<Button style={{background: '#22c55e'}}>Green</Button>
-<Button style={{background: '#f97316'}}>Orange</Button>
-<Button style={{background: '#ef4444'}}>Red</Button>
-<Button style={{background: '#3b82f6'}}>Blue (Default)</Button>
-`}>
-                    <Button className="bg-transparent text-black mr-2">Transparent</Button>
-                    <Button className="bg-white/30 text-black backdrop-blur-sm mr-2">White</Button>
-                    <Button className="bg-green-500/50 backdrop-blur-sm mr-2">Green</Button>
-                    <Button className="bg-orange-500 mr-2">Orange</Button>
-                    <Button className="bg-red-500 mr-2">Red</Button>
-                    <Button className="bg-blue-500/50 backdrop-blur-sm mr-2">Blue (Default)</Button>
+                <ExampleCodeSection classCode={``}
+                                    inlineCode={``}>
+                    <div className="flex flex-wrap gap-4 items-center">
+                        <Button className="text-red-500 bg-white rounded-lg px-3 py-2">
+                            <FontAwesomeIcon icon={faHeart} className=""/>
+                        </Button>
+
+                        <Button className="bg-indigo-600 px-3 py-2">
+                            <FontAwesomeIcon icon={faShare} className="mr-2"/>
+                            Share
+                        </Button>
+
+
+                        <Button className="text-black bg-white rounded-none px-3 py-2">
+                            Bookmark
+                            <FontAwesomeIcon icon={faBookmark} className="ml-2 text-yellow-400"/>
+                        </Button>
+                    </div>
                 </ExampleCodeSection>
+
 
                 <h3 className="text-lg font-semibold mt-8">Props</h3>
                 <p>Any prop can be passed to the component, including all <a
                     href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"
-                    className={`underline`}>attributes</a> of the regular HTML <Code>&lt;button&gt;</Code> component.</p>
+                    className={`underline`}>attributes</a> of the regular HTML <Code>&lt;button&gt;</Code> component.
+                </p>
                 <table className={`w-full mt-2`}>
                     <thead className={`text-left`}>
                     <tr>
                         <th>Prop name</th>
                         <th>Type</th>
                         <th>Default value</th>
+                        <th>Required</th>
                         <th>Description</th>
                     </tr>
                     </thead>
@@ -178,11 +181,13 @@ function MyComponent() {
                         <td><code>hoverEffect</code></td>
                         <td><code>boolean</code></td>
                         <td><code>true</code></td>
+                        <td></td>
                         <td>An optional flag to enable/disable hover effect. Default is true.</td>
                     </tr>
                     <tr>
                         <td><code>...other</code></td>
                         <td><code>any</code></td>
+                        <td></td>
                         <td></td>
                         <td>Any additional props passed to the component will be spread here.</td>
                     </tr>
