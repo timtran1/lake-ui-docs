@@ -99,18 +99,18 @@ function MyComponent() {
                 <p className="mb-4">
                     The Button component can also be customized with CSS to change its shape.
                 </p>
-                <ExampleCodeSection classCode={`<Button className="rounded-none bg-black mr-4">Sharp</Button>
-<Button className="rounded-full h-12 w-12 mr-4"><small>Circle</small></Button>
+                <ExampleCodeSection classCode={`<Button className="rounded-none mr-4">Sharp</Button>
+<Button className="bg-blue-500 rounded-full h-12 w-12 mr-4"><small>Circle</small></Button>
 <Button className="bg-green-500 mr-4">Rounded (Default)</Button>
 <Button className="rounded-2xl bg-yellow-300 text-black mr-4">More rounded</Button>
 `}
-                                    inlineCode={`<Button style={{borderRadius: 0, background: 'black'}}>Sharp</Button>
+                                    inlineCode={`<Button style={{borderRadius: 0}}>Sharp</Button>
 <Button style={{borderRadius: '50%', height: '3rem', width: '3rem'}}><small>Circle</small></Button>
 <Button style={{background: '#22c55e'}}>Rounded (Default)</Button>
 <Button style={{borderRadius: '1rem', background: '#fde047', color: 'black'}}>More rounded</Button>
 `}>
-                    <Button className="rounded-none bg-black mr-4">Sharp</Button>
-                    <Button className="rounded-full h-12 w-12 mr-4"><small>Circle</small></Button>
+                    <Button className="rounded-none mr-4">Sharp</Button>
+                    <Button className="bg-blue-500 rounded-full h-12 w-12 mr-4"><small>Circle</small></Button>
                     <Button className="bg-green-500 mr-4">Rounded (Default)</Button>
                     <Button className="rounded-2xl bg-yellow-300 text-black mr-4">More rounded</Button>
                 </ExampleCodeSection>
