@@ -26,10 +26,8 @@ export default function (props) {
                 <Link to={`/`}>Select</Link>
                 <Link to={`/`}>Switch</Link>
                 <Link to={`/`}>Slider</Link>
-                <Link to={`/`}>Table</Link>
                 <Link to={`/`}>Skeleton</Link>
                 <Link to={`/`}>Collapse</Link>
-                <Link to={`/`}>Table</Link>
                 <Link to={`/`}>Gradient Text</Link>
                 <Link to={`/`}>Dark Mode</Link>
             </div>
