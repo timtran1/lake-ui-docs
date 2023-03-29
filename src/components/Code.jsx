@@ -1,3 +1,3 @@
 export default function (props) {
-    return <code className={`bg-gray-200 rounded p-1.5 ${props.className}`}>{props.children}</code>
+    return <code className={`bg-gray-100 rounded p-1 ${props.className}`}>{props.children}</code>
 }

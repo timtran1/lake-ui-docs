@@ -6,7 +6,7 @@ import {
 import Sidebar from "../components/Sidebar.jsx";
 import TopBar from "../components/Topbar.jsx";
 import {useState} from "react";
-import SimpleCodeSection from "../components/SimpleCodeSection.jsx";
+import Code from "../components/Code.jsx";
 import ExampleCodeSection from "../components/ExampleCodeSection.jsx";
 
 
@@ -230,6 +230,7 @@ function MyComponent() {
                         <th>Prop name</th>
                         <th>Type</th>
                         <th>Default value</th>
+                        <th>Required</th>
                         <th>Description</th>
                     </tr>
                     </thead>
@@ -238,17 +239,20 @@ function MyComponent() {
                         <td><code>useOpen</code></td>
                         <td><code>array</code></td>
                         <td><code></code></td>
-                        <td>React <code>useState</code> hook array for the open state of the Dialog.</td>
+                        <td>yes</td>
+                        <td>React <Code>useState</Code> hook array for the open state of the Dialog.</td>
                     </tr>
                     <tr>
                         <td><code>disableCloseBtn</code></td>
                         <td><code>boolean</code></td>
                         <td><code>false</code></td>
+                        <td></td>
                         <td>Whether to hide the close button.</td>
                     </tr>
                     <tr>
                         <td><code>...other</code></td>
                         <td><code>any</code></td>
+                        <td></td>
                         <td></td>
                         <td>Any additional props passed to the component will be spread here.</td>
                     </tr>

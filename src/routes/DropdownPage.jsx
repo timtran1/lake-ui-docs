@@ -184,6 +184,7 @@ function MyComponent() {
                         <th>Prop name</th>
                         <th>Type</th>
                         <th>Default value</th>
+                        <th>Required</th>
                         <th>Description</th>
                     </tr>
                     </thead>
@@ -192,35 +193,41 @@ function MyComponent() {
                         <td><code>renderToggle</code></td>
                         <td><code>React.ReactNode</code></td>
                         <td><code></code></td>
+                        <td></td>
                         <td>Element to render as the dropdown toggle.</td>
                     </tr>
                     <tr>
                         <td><code>top</code></td>
                         <td><code>boolean</code></td>
                         <td><code>false</code></td>
+                        <td></td>
                         <td>Display dropdown up top.</td>
                     </tr>
                     <tr>
                         <td><code>left</code></td>
                         <td><code>boolean</code></td>
                         <td><code>false</code></td>
+                        <td></td>
                         <td>Display dropdown on the left.</td>
                     </tr>
                     <tr>
                         <td><code>onOpen</code></td>
                         <td><code>function</code></td>
                         <td><code></code></td>
+                        <td></td>
                         <td>Callback function when the dropdown is opened.</td>
                     </tr>
                     <tr>
                         <td><code>onClose</code></td>
                         <td><code>function</code></td>
                         <td><code></code></td>
+                        <td></td>
                         <td>Callback function when the dropdown is closed.</td>
                     </tr>
                     <tr>
                         <td><code>...other</code></td>
                         <td><code>any</code></td>
+                        <td></td>
                         <td></td>
                         <td>Any additional props passed to the component will be spread here.</td>
                     </tr>
@@ -235,6 +242,7 @@ function MyComponent() {
                         <th>Prop name</th>
                         <th>Type</th>
                         <th>Default value</th>
+                        <th>Required</th>
                         <th>Description</th>
                     </tr>
                     </thead>
@@ -243,11 +251,13 @@ function MyComponent() {
                         <td><code>hoverClass</code></td>
                         <td><code>string</code></td>
                         <td><code></code></td>
+                        <td></td>
                         <td>A custom class to be applied on hover state.</td>
                     </tr>
                     <tr>
                         <td><code>...other</code></td>
                         <td><code>any</code></td>
+                        <td></td>
                         <td></td>
                         <td>Any additional props passed to the component will be spread here.</td>
                     </tr>

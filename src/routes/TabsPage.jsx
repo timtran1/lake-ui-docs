@@ -7,6 +7,7 @@ import TopBar from "../components/Topbar.jsx";
 import Sidebar from "../components/Sidebar.jsx";
 import {useState} from "react";
 import SimpleCodeSection from "../components/SimpleCodeSection.jsx";
+import Code from "../components/Code.jsx";
 // import Tabs from "../components/base/Tabs.jsx";
 
 
@@ -264,6 +265,7 @@ export default function () {
                         <th>Prop name</th>
                         <th>Type</th>
                         <th>Default value</th>
+                        <th>Required</th>
                         <th>Description</th>
                     </tr>
                     </thead>
@@ -272,17 +274,20 @@ export default function () {
                         <td><code>tabs</code></td>
                         <td><code>array</code></td>
                         <td><code></code></td>
+                        <td>yes</td>
                         <td>Array of strings that define the tabs to be displayed.</td>
                     </tr>
                     <tr>
                         <td><code>useCurrentTabIndex</code></td>
                         <td><code>array</code></td>
                         <td><code></code></td>
-                        <td>React <code>useState</code> hook array for the current tab index, an integer.</td>
+                        <td>yes</td>
+                        <td>React <Code>useState</Code> hook array for the current tab index, an integer.</td>
                     </tr>
                     <tr>
                         <td><code>...other</code></td>
                         <td><code>any</code></td>
+                        <td></td>
                         <td></td>
                         <td>Any additional props passed to the component will be spread here.</td>
                     </tr>
@@ -297,6 +302,7 @@ export default function () {
                         <th>Prop name</th>
                         <th>Type</th>
                         <th>Default value</th>
+                        <th>Required</th>
                         <th>Description</th>
                     </tr>
                     </thead>
@@ -305,17 +311,20 @@ export default function () {
                         <td><code>index</code></td>
                         <td><code>integer</code></td>
                         <td><code></code></td>
+                        <td>yes</td>
                         <td>Unique index number for this TabPanel.</td>
                     </tr>
                     <tr>
                         <td><code>currentTabIndex</code></td>
                         <td><code>integer</code></td>
                         <td><code></code></td>
+                        <td>yes</td>
                         <td>The current tab index.</td>
                     </tr>
                     <tr>
                         <td><code>...other</code></td>
                         <td><code>any</code></td>
+                        <td></td>
                         <td></td>
                         <td>Any additional props passed to the component will be spread here.</td>
                     </tr>

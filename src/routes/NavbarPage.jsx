@@ -21,6 +21,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 // import TopBar from '../components/base/TopBar.jsx'
 // import SideDrawer from '../components/base/Sidebar.jsx'
+import Code from "../components/Code.jsx";
+
 
 export default function () {
     const [sidebarOpen, setSidebarOpen] = useState(false)
@@ -250,6 +252,7 @@ export default function () {
                         <th>Prop name</th>
                         <th>Type</th>
                         <th>Default value</th>
+                        <th>Required</th>
                         <th>Description</th>
                     </tr>
                     </thead>
@@ -257,6 +260,7 @@ export default function () {
                     <tr>
                         <td><code>...other</code></td>
                         <td><code>any</code></td>
+                        <td></td>
                         <td></td>
                         <td>Any additional props passed to the component will be spread here.</td>
                     </tr>
@@ -270,6 +274,7 @@ export default function () {
                         <th>Prop name</th>
                         <th>Type</th>
                         <th>Default value</th>
+                        <th>Required</th>
                         <th>Description</th>
                     </tr>
                     </thead>
@@ -278,17 +283,20 @@ export default function () {
                         <td><code>useOpen</code></td>
                         <td><code>array</code></td>
                         <td><code></code></td>
-                        <td>React <code>useState</code> hook array for the open state of the SideDrawer.</td>
+                        <td>yes</td>
+                        <td>React <Code>useState</Code> hook array for the open state of the SideDrawer.</td>
                     </tr>
                     <tr>
                         <td><code>right</code></td>
                         <td><code>boolean</code></td>
                         <td>false</td>
+                        <td></td>
                         <td>Places the SideDrawer on the right side.</td>
                     </tr>
                     <tr>
                         <td><code>...other</code></td>
                         <td><code>any</code></td>
+                        <td></td>
                         <td></td>
                         <td>Any additional props passed to the component will be spread here.</td>
                     </tr>

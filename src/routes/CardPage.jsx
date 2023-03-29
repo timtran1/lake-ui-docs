@@ -103,17 +103,20 @@ export default function () {
 
                         <Card className="rounded-none w-[280px] p-0 mt-16 group relative">
                             <div className="w-[220px] -mt-16 m-auto overflow-hidden">
-                                <img src="/watch.jpg" className="w-full group-hover:scale-110 transition-all duration-300"/>
+                                <img src="/watch.jpg"
+                                     className="w-full group-hover:scale-110 transition-all duration-300"/>
                             </div>
                             <div className="mt-2 text-center text-3xl pt-2">Tempus Nova</div>
                             <div className="text-center italic">$12,000</div>
-                            <div className="text-center text-sm p-2">Experience the ultimate fusion of style and technology
+                            <div className="text-center text-sm p-2">Experience the ultimate fusion of style and
+                                technology
                                 with the Tempus Nova watch.
                                 Crafted with precision engineering, this timepiece features state-of-the-art materials
                                 that ensure unparalleled durability and accuracy.
                             </div>
 
-                            <Button className="bg-black w-full rounded-none absolute bottom-0 left-0" hoverEffect={false}>BUY NOW</Button>
+                            <Button className="bg-black w-full rounded-none absolute bottom-0 left-0"
+                                    hoverEffect={false}>BUY NOW</Button>
                         </Card>
 
 
@@ -202,6 +205,7 @@ export default function () {
                         <th>Prop name</th>
                         <th>Type</th>
                         <th>Default value</th>
+                        <th>Required</th>
                         <th>Description</th>
                     </tr>
                     </thead>
@@ -210,11 +214,13 @@ export default function () {
                         <td><code>hoverEffect</code></td>
                         <td><code>boolean</code></td>
                         <td><code>true</code></td>
+                        <td></td>
                         <td>An optional flag to enable/disable hover effect. Default is true.</td>
                     </tr>
                     <tr>
                         <td><code>...other</code></td>
                         <td><code>any</code></td>
+                        <td></td>
                         <td></td>
                         <td>Any additional props passed to the component will be spread here.</td>
                     </tr>

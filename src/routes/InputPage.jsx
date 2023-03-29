@@ -465,9 +465,10 @@ function MyComponent() {
                 <table className={`w-full mt-2`}>
                     <thead className={`text-left`}>
                     <tr>
-                        <th>Prop name</th>
+                     <th>Prop name</th>
                         <th>Type</th>
                         <th>Default value</th>
+                        <th>Required</th>
                         <th>Description</th>
                     </tr>
                     </thead>
@@ -476,11 +477,13 @@ function MyComponent() {
                         <td><code>focusEffect</code></td>
                         <td><code>boolean</code></td>
                         <td><code>true</code></td>
+                        <td></td>
                         <td>An optional flag to enable/disable focus effect. Default is true.</td>
                     </tr>
                     <tr>
                         <td><code>...other</code></td>
                         <td><code>any</code></td>
+                        <td></td>
                         <td></td>
                         <td>Any additional props passed to the component will be spread here.</td>
                     </tr>
