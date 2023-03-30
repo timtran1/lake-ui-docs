@@ -23,11 +23,21 @@ export default function () {
                 </p>
 
                 <SimpleCodeSection>
-                    <Carousel insetControls autoPlay>
-                        <div className="bg-red-500 h-96 w-96"></div>
-                        <div className="bg-green-500 h-96 w-96"></div>
-                        <div className="bg-blue-500 h-96 w-96"></div>
-                    </Carousel>
+                    <div className="flex flex-col items-center">
+                        <h4 className="text-white font-bold text-xl mb-4 mt-8 ">Simple image carousel</h4>
+                        <Carousel autoPlay>
+                            <div className="bg-[url('/lake-1.jpg')] bg-cover bg-no-repeat bg-center h-72 w-96"></div>
+                            <div className="bg-[url('/lake-2.jpg')] bg-cover bg-no-repeat bg-center h-72 w-96"></div>
+                            <div className="bg-[url('/lake-3.jpg')] bg-cover bg-no-repeat bg-center h-72 w-96"></div>
+                        </Carousel>
+
+                        <h4 className="text-white font-bold text-xl mb-4 mt-8 ">Carousel with hybrid content</h4>
+                        <Carousel autoPlay>
+                            <div className="bg-[url('/lake-1.jpg')] bg-cover bg-no-repeat bg-center h-72 w-96"></div>
+                            <div className="bg-[url('/lake-2.jpg')] bg-cover bg-no-repeat bg-center h-72 w-96"></div>
+                            <div className="bg-[url('/lake-3.jpg')] bg-cover bg-no-repeat bg-center h-72 w-96"></div>
+                        </Carousel>
+                    </div>
                 </SimpleCodeSection>
             </main>
         </div>
