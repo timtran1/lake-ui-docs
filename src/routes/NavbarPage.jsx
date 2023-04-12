@@ -1,7 +1,7 @@
-import DocTopBar from "../components/Topbar.jsx";
-import Sidebar from "../components/Sidebar.jsx";
+import DocTopBar from "../components/navigation/Topbar.jsx";
+import Sidebar from "../components/navigation/Sidebar.jsx";
 import {useState} from "react";
-import ExampleCodeSection from "../components/ExampleCodeSection.jsx";
+import ExampleCodeSection from "../components/common/ExampleCodeSection.jsx";
 import {
     Button,
     TopBar,
@@ -21,7 +21,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 // import TopBar from '../components/base/TopBar.jsx'
 // import SideDrawer from '../components/base/Sidebar.jsx'
-import Code from "../components/Code.jsx";
+import Code from "../components/common/Code.jsx";
 
 
 export default function () {

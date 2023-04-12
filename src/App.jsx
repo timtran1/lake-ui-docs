@@ -1,7 +1,7 @@
 import {RouterProvider} from "react-router-dom";
 import router from "./router.jsx";
 import React from "react";
-import Sidebar from "./components/Sidebar.jsx";
+import Sidebar from "./components/navigation/Sidebar.jsx";
 
 export default function App() {
 

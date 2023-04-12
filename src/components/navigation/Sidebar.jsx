@@ -21,15 +21,15 @@ export default function (props) {
             <h2 className={`text-xl font-bold mt-5 mb-1`}>WIP</h2>
 
             <div className={`flex flex-col`}>
-                <Link to={`/`}>Checkbox</Link>
-                <Link to={`/`}>Radio</Link>
-                <Link to={`/`}>Select</Link>
-                <Link to={`/`}>Switch</Link>
-                <Link to={`/`}>Slider</Link>
-                <Link to={`/`}>Skeleton</Link>
-                <Link to={`/`}>Collapse</Link>
-                <Link to={`/`}>Gradient Text</Link>
-                <Link to={`/`}>Dark Mode</Link>
+                <Link to={`/checkbox`}>Checkbox</Link>
+                <Link to={`/radio`}>Radio</Link>
+                <Link to={`/select`}>Select</Link>
+                <Link to={`/collapse`}>Collapse</Link>
+                <Link to={`/switch`}>Switch</Link>
+                <Link to={`/slider`}>Slider</Link>
+                <Link to={`/skeleton`}>Skeleton</Link>
+                <Link to={`/gradient-text`}>Gradient Text</Link>
+                <Link to={`/dark-mode`}>Dark Mode</Link>
             </div>
         </SideDrawer>
     )

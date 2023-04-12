@@ -1,10 +1,10 @@
 import {Carousel, Button} from '@asynctech/lake-ui'
 // import Carousel from "../components/base/Carousel.jsx";
-import Sidebar from "../components/Sidebar.jsx";
-import TopBar from "../components/Topbar.jsx";
+import Sidebar from "../components/navigation/Sidebar.jsx";
+import TopBar from "../components/navigation/Topbar.jsx";
 import {useState} from "react";
-import SimpleCodeSection from "../components/SimpleCodeSection.jsx";
-import Code from "../components/Code.jsx";
+import SimpleCodeSection from "../components/common/SimpleCodeSection.jsx";
+import Code from "../components/common/Code.jsx";
 
 
 export default function () {

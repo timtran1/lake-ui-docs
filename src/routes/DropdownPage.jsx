@@ -1,7 +1,7 @@
-import TopBar from "../components/Topbar.jsx";
-import Sidebar from "../components/Sidebar.jsx";
+import TopBar from "../components/navigation/Topbar.jsx";
+import Sidebar from "../components/navigation/Sidebar.jsx";
 import {useState} from "react";
-import ExampleCodeSection from "../components/ExampleCodeSection.jsx";
+import ExampleCodeSection from "../components/common/ExampleCodeSection.jsx";
 import {
     Dropdown,
     DropdownItem,

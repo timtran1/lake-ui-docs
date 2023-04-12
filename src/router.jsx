@@ -9,13 +9,13 @@ import CarouselPage from "./routes/CarouselPage.jsx";
 import DialogPage from "./routes/DialogPage.jsx";
 import DropdownPage from "./routes/DropdownPage.jsx";
 import NavbarPage from "./routes/NavbarPage.jsx";
+import CheckboxPage from "./routes/CheckboxPage.jsx";
 
 export default createBrowserRouter([
     {
         path: "/",
         element: <Home/>,
     },
-
     {
         path: "/button",
         element: <ButtonPage/>,
@@ -51,5 +51,9 @@ export default createBrowserRouter([
     {
         path: "/navbars",
         element: <NavbarPage/>,
+    },
+        {
+        path: "/checkbox",
+        element: <CheckboxPage/>,
     }
 ])

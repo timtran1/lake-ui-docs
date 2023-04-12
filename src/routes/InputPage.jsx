@@ -1,13 +1,13 @@
-import ExampleCodeSection from "../components/ExampleCodeSection.jsx";
-import SimpleCodeSection from "../components/SimpleCodeSection.jsx";
+import ExampleCodeSection from "../components/common/ExampleCodeSection.jsx";
+import SimpleCodeSection from "../components/common/SimpleCodeSection.jsx";
 import {
     Input,
     Button,
     Card
 } from '@asynctech/lake-ui'
 import {useEffect, useState} from "react";
-import Sidebar from "../components/Sidebar.jsx";
-import TopBar from "../components/Topbar.jsx";
+import Sidebar from "../components/navigation/Sidebar.jsx";
+import TopBar from "../components/navigation/Topbar.jsx";
 
 
 export default function () {

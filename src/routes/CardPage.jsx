@@ -1,7 +1,7 @@
 import {Button, Card} from '@asynctech/lake-ui'
-import ExampleCodeSection from "../components/ExampleCodeSection.jsx";
-import TopBar from "../components/Topbar.jsx";
-import Sidebar from "../components/Sidebar.jsx";
+import ExampleCodeSection from "../components/common/ExampleCodeSection.jsx";
+import TopBar from "../components/navigation/Topbar.jsx";
+import Sidebar from "../components/navigation/Sidebar.jsx";
 import {useState} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faStar, faCartPlus, faHeart, faShareAlt} from "@fortawesome/free-solid-svg-icons";

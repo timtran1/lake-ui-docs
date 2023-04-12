@@ -1,7 +1,7 @@
 import {Button, Card, Input, TabPanel, Tabs, Toast} from '@asynctech/lake-ui'
 import {useState} from "react";
-import TopBar from "../components/Topbar.jsx";
-import Sidebar from "../components/Sidebar.jsx";
+import TopBar from "../components/navigation/Topbar.jsx";
+import Sidebar from "../components/navigation/Sidebar.jsx";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCartPlus, faCopy, faHeart, faShareAlt, faStar} from "@fortawesome/free-solid-svg-icons";
 // import {Link} from "react-router-dom";
