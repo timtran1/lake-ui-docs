@@ -6,7 +6,7 @@ import {
     Dropdown,
     DropdownItem,
     Button
-} from "@asynctech/lake-ui";
+} from "@deepsel/lake-ui";
 // import Dropdown from "../components/base/Dropdown.jsx";
 // import DropdownItem from "../components/base/DropdownItem.jsx";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
@@ -29,7 +29,7 @@ export default function () {
                     To use the Dropdown component, import Dropdown and DropdownItem and add them to your JSX code.
                 </p>
 
-                <ExampleCodeSection classCode={`import {Button, Dropdown, DropdownItem} from "@asynctech/lake-ui";
+                <ExampleCodeSection classCode={`import {Button, Dropdown, DropdownItem} from "@deepsel/lake-ui";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faAngleDown} from "@fortawesome/free-solid-svg-icons";
 
@@ -79,7 +79,7 @@ function MyComponent() {
         </div>
     )
 }`}
-                                    inlineCode={`import {Button, Dropdown, DropdownItem} from "@asynctech/lake-ui";
+                                    inlineCode={`import {Button, Dropdown, DropdownItem} from "@deepsel/lake-ui";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faAngleDown} from "@fortawesome/free-solid-svg-icons";
 

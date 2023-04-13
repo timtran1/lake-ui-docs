@@ -1,4 +1,4 @@
-import {Button, Card, Input, TabPanel, Tabs, Toast} from '@asynctech/lake-ui'
+import {Button, Card, Input, TabPanel, Tabs, Toast} from '@deepsel/lake-ui'
 import {useState} from "react";
 import TopBar from "../components/navigation/Topbar.jsx";
 import Sidebar from "../components/navigation/Sidebar.jsx";
@@ -14,7 +14,7 @@ export default function () {
     const [sidebarOpen, setSidebarOpen] = useState(false)
     const [copyToastOpen, setCopyToastOpen] = useState(false)
     const [tabIndex, setTabIndex] = useState(0)
-    const [getStarted, setGetStarted] = useState('npm install @asynctech/lake-ui')
+    const [getStarted, setGetStarted] = useState('npm install @deepsel/lake-ui')
 
     function copyToClipboard() {
         navigator.clipboard.writeText(getStarted);

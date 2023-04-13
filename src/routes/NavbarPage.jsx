@@ -6,7 +6,7 @@ import {
     Button,
     TopBar,
     SideDrawer
-} from "@asynctech/lake-ui"
+} from "@deepsel/lake-ui"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {
     faBars,

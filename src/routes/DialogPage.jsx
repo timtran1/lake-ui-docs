@@ -1,7 +1,7 @@
 import {
     Dialog,
     Button
-} from '@asynctech/lake-ui'
+} from '@deepsel/lake-ui'
 // import Dialog from "../components/base/Dialog.jsx";
 import Sidebar from "../components/navigation/Sidebar.jsx";
 import TopBar from "../components/navigation/Topbar.jsx";
@@ -29,7 +29,7 @@ export default function () {
                     To use the Dialog component, import it and add it to your JSX code.
                 </p>
 
-                <ExampleCodeSection classCode={`import {Button, Dialog} from "@asynctech/lake-ui";
+                <ExampleCodeSection classCode={`import {Button, Dialog} from "@deepsel/lake-ui";
 import {useState} from "react";
 
 function MyComponent() {
@@ -46,7 +46,7 @@ function MyComponent() {
             <Button className="bg-black mt-2" onClick={() => setDialogOpen(false)}>Close</Button>
         </Dialog>
     )
-}`} inlineCode={`import {Button, Dialog} from "@asynctech/lake-ui";
+}`} inlineCode={`import {Button, Dialog} from "@deepsel/lake-ui";
 import {useState} from "react";
 
 function MyComponent() {
@@ -86,7 +86,7 @@ function MyComponent() {
 
                 {/*custom styling: black gb, sharp edges*/}
                 <h3 className="text-lg font-semibold mt-4">Custom Styling</h3>
-                <ExampleCodeSection inlineCode={`import {Button, Dialog} from "@asynctech/lake-ui";
+                <ExampleCodeSection inlineCode={`import {Button, Dialog} from "@deepsel/lake-ui";
 import {useState} from "react";
 
 function MyComponent() {
@@ -120,7 +120,7 @@ function MyComponent() {
             </Dialog>
         </div>
     )
-}`} classCode={`import {Button, Dialog} from "@asynctech/lake-ui";
+}`} classCode={`import {Button, Dialog} from "@deepsel/lake-ui";
 import {useState} from "react";
 
 function MyComponent() {
@@ -168,7 +168,7 @@ function MyComponent() {
                     to <code>true</code>.
                 </p>
 
-                <ExampleCodeSection classCode={`import {Button, Dialog} from "@asynctech/lake-ui";
+                <ExampleCodeSection classCode={`import {Button, Dialog} from "@deepsel/lake-ui";
 import {useState} from "react";
 
 function MyComponent() {
@@ -185,7 +185,7 @@ function MyComponent() {
             <Button className="bg-black mt-2" onClick={() => setDialogOpen(false)}>Close</Button>
         </Dialog>
     )
-}`} inlineCode={`import {Button, Dialog} from "@asynctech/lake-ui";
+}`} inlineCode={`import {Button, Dialog} from "@deepsel/lake-ui";
 import {useState} from "react";
 
 function MyComponent() {

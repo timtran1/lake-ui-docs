@@ -1,4 +1,4 @@
-import {Carousel, Button} from '@asynctech/lake-ui'
+import {Carousel, Button} from '@deepsel/lake-ui'
 // import Carousel from "../components/base/Carousel.jsx";
 import Sidebar from "../components/navigation/Sidebar.jsx";
 import TopBar from "../components/navigation/Topbar.jsx";

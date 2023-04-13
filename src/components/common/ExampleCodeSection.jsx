@@ -1,4 +1,4 @@
-import {Tabs, TabPanel} from "@asynctech/lake-ui";
+import {Tabs, TabPanel} from "@deepsel/lake-ui";
 import HighlightedCodeBlock from "./HighlightedCodeBlock.jsx";
 import {useState} from "react";
 

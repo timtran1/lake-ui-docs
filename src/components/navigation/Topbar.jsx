@@ -1,4 +1,4 @@
-import {TopBar, Button} from "@asynctech/lake-ui";
+import {TopBar, Button} from "@deepsel/lake-ui";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBars} from "@fortawesome/free-solid-svg-icons";
 import {Link} from "react-router-dom";

@@ -1,7 +1,7 @@
 import {
     Tabs,
     TabPanel,
-} from "@asynctech/lake-ui";
+} from "@deepsel/lake-ui";
 import ExampleCodeSection from "../components/common/ExampleCodeSection.jsx";
 import TopBar from "../components/navigation/Topbar.jsx";
 import Sidebar from "../components/navigation/Sidebar.jsx";

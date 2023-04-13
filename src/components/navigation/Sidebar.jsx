@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom";
-import {SideDrawer} from "@asynctech/lake-ui"
+import {SideDrawer} from "@deepsel/lake-ui"
 
 export default function (props) {
     return (

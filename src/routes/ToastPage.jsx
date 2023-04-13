@@ -4,7 +4,7 @@ import {useState} from "react";
 import {
     Button,
     Toast
-} from "@asynctech/lake-ui";
+} from "@deepsel/lake-ui";
 // import Toast from "../components/base/Toast.jsx";
 import SimpleCodeSection from "../components/common/SimpleCodeSection.jsx";
 import ExampleCodeSection from "../components/common/ExampleCodeSection.jsx";

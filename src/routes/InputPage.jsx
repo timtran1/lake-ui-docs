@@ -4,7 +4,7 @@ import {
     Input,
     Button,
     Card
-} from '@asynctech/lake-ui'
+} from '@deepsel/lake-ui'
 import {useEffect, useState} from "react";
 import Sidebar from "../components/navigation/Sidebar.jsx";
 import TopBar from "../components/navigation/Topbar.jsx";
@@ -27,7 +27,7 @@ export default function () {
                     To use the Input component, import it and add it to your JSX code.
                 </p>
 
-                <SimpleCodeSection code={`import {Input} from "@asynctech/lake-ui";
+                <SimpleCodeSection code={`import {Input} from "@deepsel/lake-ui";
 import {useState} from "react";
 
 function MyComponent() {
