@@ -12,7 +12,7 @@ export default function (props) {
                 <Link to={`/input`}>Input</Link>
                 <Link to={`/tabs`}>Tabs</Link>
                 <Link to={`/toast`}>Toast</Link>
-                <Link to={`/carousel`}>Carousel</Link>
+                <Link to={`/slider`}>Slider</Link>
                 <Link to={`/dialog`}>Dialog</Link>
                 <Link to={`/dropdown`}>Dropdown</Link>
                 <Link to={`/navbars`}>Navigation Bars</Link>

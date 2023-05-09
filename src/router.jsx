@@ -5,7 +5,7 @@ import InputPage from "./routes/InputPage.jsx";
 import TabsPage from "./routes/TabsPage.jsx";
 import CardPage from "./routes/CardPage.jsx";
 import ToastPage from "./routes/ToastPage.jsx";
-import CarouselPage from "./routes/CarouselPage.jsx";
+import SliderPage from "./routes/SliderPage.jsx";
 import DialogPage from "./routes/DialogPage.jsx";
 import DropdownPage from "./routes/DropdownPage.jsx";
 import NavbarPage from "./routes/NavbarPage.jsx";
@@ -37,8 +37,8 @@ export default createBrowserRouter([
         element: <ToastPage/>,
     },
     {
-        path: "/carousel",
-        element: <CarouselPage/>,
+        path: "/slider",
+        element: <SliderPage/>,
     },
     {
         path: "/dialog",
