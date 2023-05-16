@@ -10,6 +10,7 @@ import DialogPage from "./routes/DialogPage.jsx";
 import DropdownPage from "./routes/DropdownPage.jsx";
 import NavbarPage from "./routes/NavbarPage.jsx";
 import CheckboxPage from "./routes/CheckboxPage.jsx";
+import TextSlidePage from "./routes/TextSlidePage.jsx";
 
 export default createBrowserRouter([
     {
@@ -52,8 +53,12 @@ export default createBrowserRouter([
         path: "/navbars",
         element: <NavbarPage/>,
     },
-        {
+    {
         path: "/checkbox",
         element: <CheckboxPage/>,
+    },
+    {
+        path: "/text-slide",
+        element: <TextSlidePage/>,
     }
 ])

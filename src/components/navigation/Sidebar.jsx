@@ -28,6 +28,7 @@ export default function (props) {
                 <Link to={`/switch`}>Switch</Link>
                 <Link to={`/slider`}>Slider</Link>
                 <Link to={`/skeleton`}>Skeleton</Link>
+                <Link to={`/text-slide`}>Text Slide</Link>
                 <Link to={`/gradient-text`}>Gradient Text</Link>
                 <Link to={`/dark-mode`}>Dark Mode</Link>
             </div>
